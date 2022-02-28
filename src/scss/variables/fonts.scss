@@ -1,0 +1,19 @@
+$fonts-path: '../fonts/';
+$roboto-path: $fonts-path + 'Roboto/';
+
+// Fonts
+$arial: 'Arial';
+$roboto: 'Roboto';
+
+$main-font: $roboto;
+
+// Roboto
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  src: local($roboto + '-Regular'),
+    url($roboto-path + $roboto + '-Regular.woff2') format('woff2'),
+    url($roboto-path + $roboto + '-Regular.woff') format('woff');
+  font-display: swap;
+}

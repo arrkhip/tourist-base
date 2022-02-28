@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    <div class="content">
+      {{> sections/header }}
+
+      <main>
+        <section>
+          <div class="container">
+            <div>
+              <!-- buttons -->
+              <div>
+                <h3 style="text-align: center"> Typography </h3>
+
+                <div style="margin: 20px">
+                  <h1 class="h1">Title H-1</h1>
+                  <h2 class="h2">Title H-2</h2>
+                  <h3 class="h3">Title H-3</h3>
+                  <h4 class="h4">Title H-4</h4>
+                  <h5 class="h5">Title H-5</h5>
+                  <h6 class="h6">Title H-6</h6>
+                </div>
+
+                <div style="margin: 20px">
+                  <h1 class="h2">Title H-1 (H-2)</h1>
+                  <h2 class="h3">Title H-2 (H-3)</h2>
+                  <h3 class="h4">Title H-3 (H-4)</h3>
+                  <h4 class="h5">Title H-4 (H-5)</h4>
+                  <h5 class="h6">Title H-5 (H-6)</h5>
+                  <h6 class="h6">Title H-6 (H-6)</h6>
+                </div>
+
+                <div style="margin: 20px 0">
+                  <h3 style="text-align: center"> Buttons </h3>
+
+                  <button class="button" type="button">
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+
+                    <span> Default button </span>
+                  </button>
+
+                  <br />
+
+                  <button class="button" type="button">
+                    <span> Default button </span>
+                  </button>
+                  <button class="button button--secondary" type="button">
+                    <span> Secondary button </span>
+                  </button>
+                  <button class="button button--flat" type="button">
+                    <span> Flat button </span>
+                  </button>
+
+                  <button disabled class="button" type="button">
+                    <span> Default button </span>
+                  </button>
+                  <button
+                    disabled
+                    class="button button--secondary"
+                    type="button"
+                  >
+                    <span> Secondary button </span>
+                  </button>
+                  <button disabled class="button button--flat" type="button">
+                    <span> Flat button </span>
+                  </button>
+
+                  <br />
+
+                  <button class="button button--small" type="button">
+                    <span> Small button </span>
+                  </button>
+                  <button
+                    class="button button--small button--secondary"
+                    type="button"
+                  >
+                    <span> Small button secondary </span>
+                  </button>
+
+                  <button disabled class="button button--small" type="button">
+                    <span> Small button </span>
+                  </button>
+                  <button
+                    disabled
+                    class="button button--small button--secondary"
+                    type="button"
+                  >
+                    <span> Small button secondary </span>
+                  </button>
+
+                  <br />
+
+                  <button class="button button--success" type="button">
+                    <svg class="svg">
+                      <use xlink:href="svg/sprite.svg#done"></use>
+                    </svg>
+                  </button>
+                  <button
+                    class="button button--secondary button--success"
+                    type="button"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="svg/sprite.svg#done"></use>
+                    </svg>
+                  </button>
+                  <button
+                    class="button button--flat button--success"
+                    type="button"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="svg/sprite.svg#done"></use>
+                    </svg>
+
+                    <span> Success! </span>
+                  </button>
+
+                  <button class="button button--error" type="button">
+                    <svg class="svg">
+                      <use xlink:href="svg/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                  <button
+                    class="button button--secondary button--error"
+                    type="button"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="svg/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                  <button
+                    class="button button--flat button--error"
+                    type="button"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="svg/sprite.svg#close"></use>
+                    </svg>
+
+                    <span> Error! </span>
+                  </button>
+
+                  <br />
+
+                  <button
+                    class="button button-icon button-icon--prev"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    class="button button-icon button-icon--next"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    disabled
+                    class="button button-icon button-icon--prev"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    disabled
+                    class="button button-icon button-icon--next"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <br />
+
+                  <button
+                    class="button button-icon button--secondary button-icon--prev"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    class="button button-icon button--secondary button-icon--next"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    disabled
+                    class="button button-icon button--secondary button-icon--prev"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    disabled
+                    class="button button-icon button--secondary button-icon--next"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <br />
+
+                  <button
+                    class="button button-icon button--flat button-icon--prev"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    class="button button-icon button--flat button-icon--next"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    disabled
+                    class="button button-icon button--flat button-icon--prev"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    disabled
+                    class="button button-icon button--flat button-icon--next"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+
+                  <br />
+
+                  <button class="button button--loading" type="button">
+                    <span> Default button </span>
+                    <svg class="svg-loading">
+                      <use xlink:href="svg/sprite.svg#loading"></use>
+                    </svg>
+                  </button>
+
+                  <button
+                    class="button button--secondary button--loading"
+                    type="button"
+                  >
+                    <span> Default button </span>
+                    <svg class="svg-loading">
+                      <use xlink:href="svg/sprite.svg#loading"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- ./ End of buttons -->
+
+              <!-- inputs -->
+              <div>
+                <h3 style="text-align: center"> Inputs </h3>
+
+                <div>
+                  <input class="input" type="text" placeholder="Placeholder" />
+                  <input
+                    readonly
+                    class="input"
+                    type="text"
+                    placeholder="Placeholder readonly"
+                  />
+
+                  <div class="input-wrapper">
+                    <svg class="input__icon">
+                      <use xlink:href="svg/sprite.svg#search"></use>
+                    </svg>
+                    <input type="text" class="input" placeholder="Search" />
+
+                    <button
+                      class="button button-icon input__clear"
+                      type="button"
+                    >
+                      <svg>
+                        <use xlink:href="svg/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <label class="label">
+                    <svg class="input__icon">
+                      <use xlink:href="svg/sprite.svg#done"></use>
+                    </svg>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Placeholder"
+                    />
+                  </label>
+
+                  <label class="label">
+                    <input
+                      readonly
+                      class="input"
+                      type="text"
+                      placeholder="Placeholder readonly"
+                    />
+                    <svg class="input__icon">
+                      <use xlink:href="svg/sprite.svg#done"></use>
+                    </svg>
+                  </label>
+
+                  <br />
+
+                  <textarea
+                    class="textarea"
+                    placeholder="Placeholder"
+                  ></textarea>
+
+                  <textarea
+                    readonly
+                    class="textarea"
+                    placeholder="Placeholder readonly"
+                  ></textarea>
+
+                  <br />
+
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
+                    <div class="checkbox__custom">
+                      <svg class="checkbox__icon">
+                        <use xlink:href="svg/sprite.svg#done"></use>
+                      </svg>
+                    </div>
+                    <span class="checkbox__text">
+                      Lorem
+                      <a class="checkbox__link" href="#">Lorem ipsum</a>
+                    </span>
+                  </label>
+
+                  <label class="checkbox">
+                    <input disabled class="checkbox__input" type="checkbox" />
+                    <div class="checkbox__custom">
+                      <svg class="checkbox__icon">
+                        <use xlink:href="svg/sprite.svg#done"></use>
+                      </svg>
+                    </div>
+                    <span class="checkbox__text">
+                      Lorem
+                      <a class="checkbox__link" href="#">Lorem ipsum</a>
+                    </span>
+                  </label>
+
+                  <label class="checkbox">
+                    <input
+                      disabled
+                      checked
+                      class="checkbox__input"
+                      type="checkbox"
+                    />
+                    <div class="checkbox__custom">
+                      <svg class="checkbox__icon">
+                        <use xlink:href="svg/sprite.svg#done"></use>
+                      </svg>
+                    </div>
+                    <span class="checkbox__text">
+                      Lorem
+                      <a class="checkbox__link" href="#">Lorem ipsum</a>
+                    </span>
+                  </label>
+
+                  <br />
+
+                  <label class="radio">
+                    <input class="radio__input" type="radio" name="name1" />
+                    <div class="radio__custom"> </div>
+                    <span class="radio__text">
+                      Lorem
+                      <a class="radio__link" href="#">Lorem ipsum</a>
+                    </span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      disabled
+                      class="radio__input"
+                      type="radio"
+                      name="name1"
+                    />
+                    <div class="radio__custom"> </div>
+                    <span class="radio__text">
+                      Lorem
+                      <a class="radio__link" href="#">Lorem ipsum</a>
+                    </span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      disabled
+                      checked
+                      class="radio__input"
+                      type="radio"
+                      name="name1"
+                    />
+                    <div class="radio__custom"> </div>
+                    <span class="radio__text">
+                      Lorem
+                      <a class="radio__link" href="#">Lorem ipsum</a>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <!-- ./ End of inputs -->
+
+              <!-- components -->
+              <div>
+                <h3 style="text-align: center"> Components </h3>
+
+                <div style="display: flex">
+                  <div
+                    data-title-template="Selected $ cluster"
+                    id="dropdown1"
+                    class="dropdown j_dropdown"
+                  >
+                    <select multiple>
+                      <option value="1">Lorem ipsum dolor sit amet 1</option>
+                      <option value="2">Lorem ipsum dolor sit amet 2</option>
+                      <option value="3">Lorem ipsum dolor sit amet 3</option>
+                      <option value="4">Lorem ipsum dolor sit amet 4</option>
+                      <option value="5">Lorem ipsum dolor sit amet 5</option>
+                      <option value="6">Lorem ipsum dolor sit amet 6</option>
+                    </select>
+
+                    <button
+                      type="button"
+                      class="button button-select dropdown__button j_toggleDropdown"
+                    >
+                      <span
+                        data-placeholder="Dropdown placeholder"
+                        class="dropdown__placeholder"
+                      >
+                        Dropdown placeholder
+                      </span>
+
+                      <div class="dropdown__arrow-wrapper">
+                        <svg class="dropdown__arrow">
+                          <use xlink:href="svg/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <div class="dropdown__content">
+                      <div class="dropdown__container">
+                        <div class="dropdown__search">
+                          <div class="input-wrapper">
+                            <svg class="input__icon">
+                              <use xlink:href="svg/sprite.svg#search"></use>
+                            </svg>
+                            <input
+                              data-dropdown-search
+                              type="text"
+                              class="input"
+                              placeholder="Search"
+                            />
+
+                            <button
+                              class="button button-icon input__clear"
+                              type="button"
+                            >
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <ul class="dropdown__list">
+                          <li
+                            data-dropdown-subtitle="1,2,3"
+                            class="dropdown__item"
+                          >
+                            <span class="dropdown__subtitle">
+                              Kowloon East Cluster
+                            </span>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="checkbox">
+                              <input
+                                value="1"
+                                class="checkbox__input"
+                                type="checkbox"
+                              />
+                              <div class="checkbox__custom">
+                                <svg class="checkbox__icon">
+                                  <use xlink:href="svg/sprite.svg#done"></use>
+                                </svg>
+                              </div>
+                              <span class="checkbox__text">
+                                Lorem ipsum dolor sit amet 1
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="checkbox">
+                              <input
+                                value="2"
+                                class="checkbox__input"
+                                type="checkbox"
+                              />
+                              <div class="checkbox__custom">
+                                <svg class="checkbox__icon">
+                                  <use xlink:href="svg/sprite.svg#done"></use>
+                                </svg>
+                              </div>
+                              <span class="checkbox__text">
+                                Lorem ipsum dolor sit amet 2
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="checkbox">
+                              <input
+                                value="3"
+                                class="checkbox__input"
+                                type="checkbox"
+                              />
+                              <div class="checkbox__custom">
+                                <svg class="checkbox__icon">
+                                  <use xlink:href="svg/sprite.svg#done"></use>
+                                </svg>
+                              </div>
+                              <span class="checkbox__text">
+                                Lorem ipsum dolor sit amet 3
+                              </span>
+                            </label>
+                          </li>
+                          <li
+                            data-dropdown-subtitle="4,5,6"
+                            class="dropdown__item"
+                          >
+                            <span class="dropdown__subtitle">
+                              Hong Kong West Cluster
+                            </span>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="checkbox">
+                              <input
+                                value="4"
+                                class="checkbox__input"
+                                type="checkbox"
+                              />
+                              <div class="checkbox__custom">
+                                <svg class="checkbox__icon">
+                                  <use xlink:href="svg/sprite.svg#done"></use>
+                                </svg>
+                              </div>
+                              <span class="checkbox__text">
+                                Lorem ipsum dolor sit amet 4
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="checkbox">
+                              <input
+                                value="5"
+                                class="checkbox__input"
+                                type="checkbox"
+                              />
+                              <div class="checkbox__custom">
+                                <svg class="checkbox__icon">
+                                  <use xlink:href="svg/sprite.svg#done"></use>
+                                </svg>
+                              </div>
+                              <span class="checkbox__text">
+                                Lorem ipsum dolor sit amet 5
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="checkbox">
+                              <input
+                                value="6"
+                                class="checkbox__input"
+                                type="checkbox"
+                              />
+                              <div class="checkbox__custom">
+                                <svg class="checkbox__icon">
+                                  <use xlink:href="svg/sprite.svg#done"></use>
+                                </svg>
+                              </div>
+                              <span class="checkbox__text">
+                                Lorem ipsum dolor sit amet 6
+                              </span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    data-title-template="$"
+                    id="dropdown-departament"
+                    class="dropdown j_dropdown"
+                  >
+                    <select multiple>
+                      <option value="1"> Positive </option>
+                      <option value="2"> Negative </option>
+                      <option value="3"> TBC </option>
+                    </select>
+
+                    <button
+                      type="button"
+                      class="button button-select button-select--flat dropdown__button j_toggleDropdown"
+                    >
+                      <span
+                        data-placeholder="Select AIRS department"
+                        class="dropdown__placeholder"
+                      >
+                        Select AIRS department
+                      </span>
+
+                      <div class="dropdown__arrow-wrapper">
+                        <svg class="dropdown__arrow">
+                          <use xlink:href="svg/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div>
+                    </button>
+
+                    <div class="dropdown__content">
+                      <div class="dropdown__container">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <label class="radio">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="name1"
+                                value="1"
+                              />
+                              <div class="radio__custom"> </div>
+                              <span class="radio__text"> Positive </span>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="radio">
+                              <input
+                                class="radio__input"
+                                checked
+                                type="radio"
+                                name="name1"
+                                value="2"
+                              />
+                              <div class="radio__custom"> </div>
+                              <span class="radio__text"> Negative </span>
+                            </label>
+                          </li>
+                          <li class="dropdown__item">
+                            <label class="radio">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="name1"
+                                value="3"
+                              />
+                              <div class="radio__custom"> </div>
+                              <span class="radio__text"> TBC </span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ./ End of components -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {{> sections/footer }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+html {
+  --white: #{$white};
+  --black: #{$black};
+  --primary-default: #{$primary-default};
+  --primary-hover: #{$primary-hover};
+  --primary-active: #{$primary-active};
+  --primary-disable: #{$primary-disable};
+  --primary-gradient: #{$primary-gradient};
+  --secondary-1: #{$secondary-1};
+  --secondary-2: #{$secondary-2};
+  --secondary-3: #{$secondary-3};
+  --secondary-4: #{$secondary-4};
+  --secondary-5: #{$secondary-5};
+  --secondary-6: #{$secondary-6};
+  --secondary-7: #{$secondary-7};
+  --secondary-8: #{$secondary-8};
+  --secondary-9: #{$secondary-9};
+  --success: #{$success};
+  --error: #{$error};
+  --progress: #{$progress};
+  --bg-main: #{$bg-main};
+  --blue: #{$blue};
+  --ripple-default: #{$ripple-default};
+  --ripple-secondary: #{$ripple-secondary};
+}

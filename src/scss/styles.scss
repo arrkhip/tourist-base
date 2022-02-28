@@ -1,0 +1,27 @@
+// Extensions - Расширения
+@import 'extensions/reset';
+@import 'extensions/sitemap';
+
+// Libs - Библиотеки
+// @import '~swiper/swiper-bundle.min.css';
+
+// Variables - Переменные
+@import 'variables/fonts';
+@import 'variables/variables';
+@import 'variables/mixins';
+@import 'variables/functions';
+@import 'variables/global';
+@import 'variables/typography';
+@import 'variables/UI';
+
+// Components - Компоненты
+@import 'components/dropdown';
+@import 'components/modal';
+
+// Sections - Секции
+@import 'sections/header';
+@import 'sections/footer';
+
+// Themes - Темы
+@import 'themes/default';
+@import 'themes/dark';

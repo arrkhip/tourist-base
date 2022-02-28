@@ -2,7 +2,7 @@
   "editor.minimap.enabled": true,
   "breadcrumbs.enabled": true,
   "window.menuBarVisibility": "default",
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "editor.tabSize": 2,
   "editor.fontLigatures": true,
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",

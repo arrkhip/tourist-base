@@ -8,10 +8,10 @@ $gray-dark: #444;
 $accent: #2d376a;
 $green: #008000;
 
-$primary-default: #7443ff;
-$primary-hover: #875cff;
-$primary-active: #6132e6;
-$primary-disable: #beadee;
+$primary-default: #3d6d8f;
+$primary-hover: #4c728d;
+$primary-active: #326183;
+$primary-disable: #5d7586;
 $primary-gradient: linear-gradient(180deg, #9975ff 0%, #6332f0 100%);
 $secondary-1: #f4f7fe;
 $secondary-2: #e1e9f8;
@@ -25,7 +25,7 @@ $secondary-9: #1b2559;
 $success: #01b574;
 $error: #e04245;
 $progress: #f2994a;
-$bg-main: #f5f6fc;
+$bg-main: #deebf4;
 $blue: #446de1;
 
 $ripple-default: radial-gradient(
@@ -53,7 +53,7 @@ $phone: 600px;
 $phone-sm: 350px;
 
 // container
-$container-max-width: calc(1740px + 2rem);
+$container-max-width: calc(1470px + 2rem);
 $container-padding: 0 1rem;
 
 // section
@@ -64,39 +64,41 @@ $section-padding-phone: 20px 0;
 /* Typography */
 // h1
 $h-one-font: $main-font;
-$h-one-font-size: 1.875rem;
+$h-one-font-size: 4rem;
 $h-one-font-size-sm: 1.875rem;
-$h-one-font-weight: bold;
-$h-one-line-height: 1.3;
+$h-one-font-weight: normal;
+$h-one-line-height: 1.125;
 $h-one-color: currentColor;
 $h-one-margin: 0 0 2.375rem;
 
 // h2
 $h-two-font: $main-font;
-$h-two-font-size: 1.875rem;
+$h-two-font-size: 3rem;
 $h-two-font-size-sm: 1.875rem;
-$h-two-font-weight: bold;
-$h-two-line-height: 1.3;
+$h-two-font-weight: normal;
+$h-two-line-height: 1.333;
 $h-two-color: currentColor;
 $h-two-margin: 0 0 1.5rem;
 
 // h3
 $h-three-font: $main-font;
-$h-three-font-size: 1.4375rem;
+$h-three-font-size: 3rem;
 $h-three-font-size-sm: 1.4375rem;
-$h-three-font-weight: bold;
-$h-three-line-height: 1.3;
+$h-three-font-weight: normal;
+$h-three-line-height: 1.5;
 $h-three-color: currentColor;
 $h-three-margin: 10px 0;
 
 // h4
 $h-four-font: $main-font;
-$h-four-font-size: 1.25rem;
+$h-four-font-size: 1.75rem;
 $h-four-font-size-sm: 1.25rem;
 $h-four-font-weight: bold;
-$h-four-line-height: 1.3;
+$h-four-line-height: 1.5;
 $h-four-color: currentColor;
 $h-four-margin: 5px 0;
+
+// ------- End my styles for this project
 
 // h5
 $h-five-font: $main-font;
@@ -119,19 +121,19 @@ $h-six-margin: 5px 0;
 /* UI */
 // button
 $button-font: $main-font;
-$button-font-size: 16px;
-$button-font-weight: bold;
-$button-line-height: 1.25;
-$button-border-width: 1px;
-$button-border-radius: 50px;
-$button-padding: 9px 1.5em;
+$button-font-size: 12px;
+$button-font-weight: normal;
+$button-line-height: 1.667;
+$button-border-width: 0;
+$button-border-radius: 25px;
+$button-padding: 12px 2.667em;
 $button-padding-sm: 9px 1.5em;
 $button-min-width: auto;
 $button-margin: 5px;
 
 $button-small-min-width: initial;
 $button-small-padding: 0.625em 1.25em;
-$button-small-font-size: 14px;
+$button-small-font-size: 12px;
 
 $button-big-min-width: 220px;
 $button-big-padding: 1.5em 1.75em;
@@ -140,8 +142,8 @@ $button-big-font-size: 1rem;
 // input
 $input-font: $main-font;
 $input-font-size: 16px;
-$input-font-weight: normal;
-$input-line-height: 1.3;
+$input-font-weight: 300;
+$input-line-height: 1.5;
 $input-color: $secondary-9;
 $input-color-placeholder: $secondary-4;
 $input-border-width: 1px;

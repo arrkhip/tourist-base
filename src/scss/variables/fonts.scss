@@ -1,19 +1,114 @@
 $fonts-path: '../fonts/';
 $roboto-path: $fonts-path + 'Roboto/';
+$jost-path: $fonts-path + 'Jost/';
 
 // Fonts
 $arial: 'Arial';
 $roboto: 'Roboto';
+$jost: 'Jost';
 
-$main-font: $roboto;
+$main-font: $jost, sans-serif;
+$second-font: $roboto, sans-serif;
+
+// Jost
+@font-face {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 300;
+  src: local($jost + '-300'),
+    url($jost-path + $jost + '-300.woff2') format('woff2'),
+    url($jost-path + $jost + '-300.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: normal;
+  src: local($jost + '-400'),
+    url($jost-path + $jost + '-400.woff2') format('woff2'),
+    url($jost-path + $jost + '-400.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 500;
+  src: local($jost + '-500'),
+    url($jost-path + $jost + '-500.woff2') format('woff2'),
+    url($jost-path + $jost + '-500.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 600;
+  src: local($jost + '-600'),
+    url($jost-path + $jost + '-600.woff2') format('woff2'),
+    url($jost-path + $jost + '-600.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 700;
+  src: local($jost + '-700'),
+    url($jost-path + $jost + '-700.woff2') format('woff2'),
+    url($jost-path + $jost + '-700.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 800;
+  src: local($jost + '-800'),
+    url($jost-path + $jost + '-800.woff2') format('woff2'),
+    url($jost-path + $jost + '-800.woff') format('woff');
+  font-display: swap;
+}
+
+// Roboto
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local($roboto + '-300'),
+    url($roboto-path + $roboto + '-300.woff2') format('woff2'),
+    url($roboto-path + $roboto + '-300.woff') format('woff');
+  font-display: swap;
+}
 
 // Roboto
 @font-face {
   font-family: $roboto;
   font-style: normal;
   font-weight: normal;
-  src: local($roboto + '-Regular'),
-    url($roboto-path + $roboto + '-Regular.woff2') format('woff2'),
-    url($roboto-path + $roboto + '-Regular.woff') format('woff');
+  src: local($roboto + '-400'),
+    url($roboto-path + $roboto + '-400.woff2') format('woff2'),
+    url($roboto-path + $roboto + '-400.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: local($roboto + '-500'),
+    url($roboto-path + $roboto + '-500.woff2') format('woff2'),
+    url($roboto-path + $roboto + '-500.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: local($roboto + '-700'),
+    url($roboto-path + $roboto + '-700.woff2') format('woff2'),
+    url($roboto-path + $roboto + '-700.woff') format('woff');
   font-display: swap;
 }

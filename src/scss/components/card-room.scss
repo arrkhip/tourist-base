@@ -1,0 +1,53 @@
+.card-room {
+  max-width: 548px;
+  background-color: var(--white);
+
+  &__banner {
+    max-height: 537px;
+  }
+
+  // &__slider {
+  // }
+
+  // &__slide {
+  // }
+
+  // &__photo-wrap {
+  // }
+
+  // &__photo {
+  // }
+
+  &__content {
+    padding: 32px 40px;
+  }
+
+  // &__info {
+  // }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    line-height: 1.667;
+    text-transform: uppercase;
+    color: var(--primary-default);
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+}

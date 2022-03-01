@@ -1,7 +1,102 @@
-// .header {
-//   background-color: url('@img/test.jpg');
-// }
+.header {
+  // ВРЕМЕННО
+  // Перенести к сетки и выделить как отдельную сущность
+  .container {
+    max-width: calc(1715px + 1rem);
+  }
 
-// .header__wrap {
-//   background-color: #fff;
-// }
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: 164px;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+  }
+
+  &__social {
+    display: inline-flex;
+
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    span {
+      font-size: 0.75rem;
+      line-height: 1.333;
+    }
+  }
+
+  &__phone {
+    margin-right: 32px;
+
+    a {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.429;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      color: var(--black);
+    }
+
+    span {
+      display: block;
+      margin-top: 2px;
+      font-weight: 300;
+      font-size: 0.75rem;
+      line-height: 1.333;
+      color: var(--primary-default);
+    }
+  }
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    line-height: 1.667;
+    text-transform: uppercase;
+    color: var(--black);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $primary-active;
+    }
+  }
+}

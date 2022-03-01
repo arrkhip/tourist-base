@@ -41,6 +41,16 @@
     ],
     "description": "Create picture"
   },
+  "SVG Sprite": {
+    "scope": "html",
+    "prefix": "svg-i",
+    "body": [
+      "<svg class=\"$1\">",
+      "\t<use xlink:href=\"svg/sprite.svg#$2\"></use>",
+      "</svg>"
+    ],
+    "description": "Create svg-icon"
+  },
   // SCSS
   "max-w": {
     "scope": "scss",

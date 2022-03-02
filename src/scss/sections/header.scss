@@ -8,6 +8,7 @@
   &__wrap {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -18,14 +19,69 @@
     }
   }
 
+  &__content {
+    @include max-width(992px) {
+      display: none;
+
+      &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include max-width(992px) {
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 100%;
+      max-width: 400px;
+      padding: 50px;
+      background-color: var(--white);
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    z-index: 10;
+    display: none;
+
+    @include max-width(992px) {
+      display: block;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   &__nav {
     margin-left: auto;
     margin-right: 164px;
+
+    @include max-width(992px) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__contacts {
     display: flex;
     align-items: center;
+    @include max-width(992px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__social-wrap {
@@ -76,6 +132,9 @@
   }
 }
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// ПЕРЕНЕСТИ
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .header-nav {
   &__list {
     display: flex;
@@ -97,6 +156,24 @@
 
     &:hover {
       color: $primary-active;
+    }
+  }
+
+  @include max-width(992px) {
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__link {
+      font-size: 1rem;
     }
   }
 }

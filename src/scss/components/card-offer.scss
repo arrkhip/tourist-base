@@ -1,0 +1,99 @@
+.card-offer {
+  // max-width: 1716px;
+
+  &__wrapper {
+    display: flex;
+    min-height: 764px;
+    // 1500px min-height: 625px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    // width: 36.13%;
+    width: 100%;
+    max-width: 620px;
+    padding-left: 124px;
+    // padding-left: 20%;
+    background-color: var(--white);
+
+    flex-shrink: 1.4;
+
+    // 1500px pl:60px;
+  }
+
+  &__banner {
+    // width: 63.869%;
+    width: 100%;
+    max-width: 1096px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    // Width < 1500px flex-shrink: 1.5;
+  }
+
+  &__sale {
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--primary-default);
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 120px;
+    margin-right: -27px;
+    background-color: var(--white);
+
+    // 1500px pb:60
+  }
+
+  &__descr {
+    max-width: 423px;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+  }
+
+  @include max-width(768px) {
+    max-width: 292px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      // проверь
+      // check this method
+      min-height: auto;
+    }
+
+    &__info {
+      display: block;
+      padding: 32px 20px;
+    }
+
+    &__sale {
+      margin-bottom: 0;
+      font-size: 2.769rem;
+      line-height: 1.556em;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      background-color: inherit;
+    }
+
+    &__descr {
+      max-width: 100%;
+      max-width: initial;
+      font-size: 1.231rem;
+    }
+
+    &__banner {
+      width: 100%;
+      // Test this properti
+      height: 204px;
+    }
+  }
+}

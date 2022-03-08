@@ -41,6 +41,23 @@ main {
   max-width: $container-max-width;
   padding: $container-padding;
   margin: 0 auto;
+
+  &--lg {
+    max-width: calc(1716px + (68px * 2));
+    padding-left: 68px;
+    padding-right: 68px;
+    margin: 0 auto;
+
+    @include max-width(1280px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include max-width(768px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 }
 
 // section {

@@ -101,6 +101,22 @@
     ],
     "description": "For same ratio"
   },
+  "pseudo element": {
+    "scope": "scss",
+    "prefix": "_pe",
+    "body": [
+      "&::before {",
+        "\tcontent: '';",
+        "\tposition: absolute;",
+        "\ttop: 0;",
+        "\tleft: 0;",
+        "\twidth: 100%;",
+        "\theight: 100%;",
+        "\tbackground-color: #fff;",
+      "}"
+    ],
+    "description": "For same ratio"
+  },
   // JS
   "class": {
     "scope": "javascript",

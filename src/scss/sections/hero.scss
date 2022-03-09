@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  height: 100vh;
+
+  &__wrapper {
+  }
+
+  &__slider {
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+  }
+
+  &__banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    max-width: 721px;
+    color: var(--white);
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    font: 300 1.5rem / 1.5rem $second-font;
+  }
+}

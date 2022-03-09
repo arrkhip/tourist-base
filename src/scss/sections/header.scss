@@ -1,9 +1,5 @@
 .header {
-  // ВРЕМЕННО
-  // Перенести к сетки и выделить как отдельную сущность
-  .container {
-    max-width: calc(1715px + 1rem);
-  }
+  z-index: 10;
 
   &__wrap {
     display: flex;

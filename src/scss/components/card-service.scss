@@ -1,0 +1,229 @@
+.card-service {
+  // Чтобы декоративная надпись у заголовка была под контентом
+  position: relative;
+  z-index: 1;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__col--25 {
+    flex: 1 1 476px;
+
+    .card-service__info {
+      padding-right: 104px;
+    }
+  }
+
+  &__col--75 {
+    flex: 1 1 972px;
+
+    .card-service__info {
+      padding-left: 104px;
+    }
+  }
+
+  &__col--100 {
+    display: flex;
+    align-items: flex-end;
+    min-height: 820px;
+
+    .card-service__banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 52.68%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(227, 242, 255, 0.8) 0%,
+            rgba(205, 249, 255, 0) 21.83%
+          );
+      }
+    }
+
+    .card-service__info {
+      position: relative;
+      max-width: 848px;
+      margin: 108px 124px;
+      color: var(--white);
+    }
+
+    .card-service__number::before,
+    .card-service__link {
+      color: inherit;
+    }
+
+    .card-service__title::before {
+      display: none;
+    }
+  }
+
+  &__number {
+    position: relative;
+    margin-bottom: 16px;
+
+    &::before {
+      counter-increment: service;
+      content: counter(service);
+      z-index: 2;
+      font-size: 1.5rem;
+      line-height: 3;
+      color: var(--primary-default);
+
+      // Вставка нуля перед счётчиком для первых 9-ти секций
+      .services__item:nth-child(-n + 9) & {
+        content: '0' counter(service);
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 16px;
+
+    &::before {
+      content: attr(data-title);
+      position: absolute;
+      top: -70px;
+      left: 0;
+      z-index: -1;
+      font-weight: 700;
+      font-size: 9rem;
+      line-height: 1;
+      color: var(--bg-main);
+      text-shadow: 0 -1px 0 #ffffff, 0 -1px 0 #ffffff, 0 1px 0 #ffffff,
+        0 1px 0 #ffffff, -1px 0 0 #ffffff, 1px 0 0 #ffffff, -1px 0 0 #ffffff,
+        1px 0 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+  }
+
+  &__descr {
+    font: 300 1rem / 1.5 $second-font;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    font-size: 0.625rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: var(--primary-default);
+  }
+
+  &__banner {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include max-width(768px) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__col--25 {
+      flex: 1 1 auto;
+      width: 100%;
+
+      .card-service__info {
+        padding-right: 0;
+      }
+    }
+
+    &__col--75 {
+      flex: 1 1 auto;
+      width: 100%;
+
+      .card-service__info {
+        padding-left: 0;
+      }
+    }
+
+    &__col--100 {
+      display: block;
+      min-height: initial;
+
+      .card-service__banner {
+        position: static;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .card-service__info {
+        margin: 0;
+        color: var(--black);
+      }
+
+      .card-service__number::before,
+      .card-service__link {
+        color: var(--primary-default);
+      }
+    }
+
+    &__col--mobile-top {
+      order: -1;
+    }
+
+    &__info {
+      padding-top: 24px;
+    }
+
+    &__number::before {
+      font-size: 1.077rem;
+      line-height: 1.143;
+    }
+
+    &__title::before {
+      top: -12px;
+      font-size: 2.769rem;
+      text-shadow: 0 -0.28px 0 #ffffff, 0 -0.28px 0 #ffffff, 0 0.28px 0 #ffffff,
+        0 0.28px 0 #ffffff, -0.28px 0 0 #ffffff, 0.28px 0 0 #ffffff,
+        -0.28px 0 0 #ffffff, 0.28px 0 0 #ffffff, -0.28px -0.28px 0 #ffffff,
+        0.28px -0.28px 0 #ffffff, -0.28px 0.28px 0 #ffffff,
+        0.28px 0.28px 0 #ffffff, -0.28px -0.28px 0 #ffffff,
+        0.28px -0.28px 0 #ffffff, -0.28px 0.28px 0 #ffffff, 0.28px 0.28px 0 #fff;
+    }
+
+    &__descr {
+      font: 300 1rem / 1.5 $second-font;
+      margin-bottom: 16px;
+    }
+
+    &__link {
+      font-size: 0.625rem;
+      line-height: 2;
+      text-transform: uppercase;
+      color: var(--primary-default);
+    }
+
+    &__banner {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

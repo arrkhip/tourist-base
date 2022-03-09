@@ -1,0 +1,36 @@
+.services {
+  padding-top: 100px;
+
+  &__title {
+    font-size: 6rem;
+    line-height: 1.167;
+  }
+
+  &__list {
+    padding-top: 92px;
+    counter-reset: service;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 128px;
+    }
+  }
+
+  @include max-width(768px) {
+    &__title {
+      font-size: 1.846rem;
+      line-height: 1.5;
+    }
+
+    &__list {
+      padding-top: 24px;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

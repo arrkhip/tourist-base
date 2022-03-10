@@ -19,6 +19,59 @@
       {{> sections/hero }}
       {{> sections/offers }}
       {{> sections/about }}
+
+      <!-- rooms -->
+      <section class="rooms">
+        <div class="container container--lg">
+          <div class="rooms__headline">
+            <h2>Номерной фонд</h2>
+            <a href="#">Карта-схема фонда</a>
+          </div>
+
+          <div class="rooms__wrapper">
+
+            <div class="card-room">
+              <div class="card-room__banner">
+                <div class="card-room__slider">
+                  <div class="swiper">
+
+                    <div class="swiper-wrapper">
+                      <div class="card-room__slide swiper-slide">
+                        <div class="card-room__photo-wrap">
+                          <picture class="card-room__photo">
+                            <!-- <source srcset="images/room-1.webp" /> -->
+                            <img src="../img/room-1.jpg" />
+                          </picture>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="card-room__content">
+
+                <div class="card-room__info">
+                  <div class="card-room__title">Двухместный стандарт — 20 номеров в домах срубах</div>
+                  <a href="#" class="card-room__link">Показать на карте</a>
+                </div>
+
+                <div class="card-room__total">
+                  <div class="card-room__price">от 2 390 ₽</div>
+                  <button class="card-room__button button">Забронировать</button>
+                </div>
+              </div>
+              <!-- End card-room__content -->
+
+            </div>
+            <!-- End card-room -->
+
+          </div>
+        </div> <!-- ./ End of container -->
+      </section> <!-- ./ End of rooms -->
+
       {{> sections/services }}
 
     </main>

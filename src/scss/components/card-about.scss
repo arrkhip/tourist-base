@@ -31,12 +31,12 @@
     padding-bottom: 36px;
 
     &::before {
-      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       width: 104px;
       height: 5px;
+      content: '';
       background-color: var(--primary-default);
     }
   }

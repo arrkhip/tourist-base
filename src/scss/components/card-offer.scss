@@ -9,6 +9,7 @@
 
   &__info {
     display: flex;
+    flex-shrink: 1.4;
     align-items: center;
     // width: 36.13%;
     width: 100%;
@@ -16,8 +17,6 @@
     padding-left: 124px;
     // padding-left: 20%;
     background-color: var(--white);
-
-    flex-shrink: 1.4;
 
     // 1500px pl:60px;
   }
@@ -37,15 +36,15 @@
   }
 
   &__sale {
-    font-weight: 800;
     margin-bottom: 40px;
+    font-weight: 800;
     color: var(--primary-default);
   }
 
   &__title {
     position: relative;
-    margin-bottom: 120px;
     margin-right: -27px;
+    margin-bottom: 120px;
     background-color: var(--white);
 
     // 1500px pb:60

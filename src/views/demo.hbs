@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>{{ title }}</title>
+  </head>
 
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <title>{{ title }}</title>
-</head>
+  <body>
+    <div class="content">
+      {{> sections/header }}
 
-<body>
-  <div class="content">
-    {{> sections/header }}
+      <main>
+        <!-- demo -->
+        <section class="demo-section">
+          <div class="container">
+            <h1> {{ title }} page </h1>
 
-    <main>
-      <!-- demo -->
-      <section class="demo-section">
-        <div class="container">
-          <h1>{{ title }} page</h1>
+            {{> components/component}}
 
-          {{> components/component}}
+            <svg>
+              <use xlink:href="svg/sprite.svg#done"></use>
+            </svg>
 
-          <svg>
-            <use xlink:href="svg/sprite.svg#done"></use>
-          </svg>
+            <div>
+              <button
+                data-modal-target="#modal-test"
+                class="button"
+                type="button"
+              >
+                Modal test
+              </button>
+            </div>
 
-          <div>
-            <button data-modal-target="#modal-test" class="button" type="button">
-              Modal test
-            </button>
+            <picture class="pic">
+              <source srcset="images/test.jpg.webp" />
+              <img src="../img/test.jpg" />
+            </picture>
           </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of demo -->
+      </main>
 
-          <picture class="pic">
-            <source srcset="images/test.jpg.webp" />
-            <img src="../img/test.jpg" />
-          </picture>
-        </div>
-        <!-- ./ End of container -->
-      </section>
-      <!-- ./ End of demo -->
-    </main>
+      {{> sections/footer }}
+    </div>
 
-    {{> sections/footer }}
-  </div>
-
-  <!-- modals -->
-  {{> modals/test}}
-</body>
-
+    <!-- modals -->
+    {{> modals/test}}
+  </body>
 </html>

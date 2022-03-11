@@ -3,33 +3,36 @@
   <div class="container container--lg">
     <!-- header__wrap -->
     <div class="header__wrap">
-      <!-- header__logo -->
-      <a href="#" class="header__logo">
-        <img src="img/logo.svg" alt="Белая река Даховская" />
-      </a>
-      <!-- ./ End of .header__logo -->
+      <div class="header__left">
+        <!-- header__logo -->
+        <a href="#" class="header__logo" title="Белая река Даховская">
+          <img src="img/svg/logo.svg" alt="Белая река Даховская" />
+        </a>
+        <!-- ./ End of .header__logo -->
+
+        <nav class="header__nav header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"> Спецпредложения </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"> О комплексе </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"> Схема комплекса </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"> Услуги </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"> Контакты </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <div class="j_menu header__content">
         <div class="header__inner">
-          <!-- header__nav -->
-          <nav class="header__nav header-nav">
-            <ul class="header-nav__list">
-              <li class="header-nav__item">
-                <a href="#" class="header-nav__link"> О комплексе </a>
-              </li>
-              <li class="header-nav__item">
-                <a href="#" class="header-nav__link"> Схема комплекса </a>
-              </li>
-              <li class="header-nav__item">
-                <a href="#" class="header-nav__link"> Услуги </a>
-              </li>
-              <li class="header-nav__item">
-                <a href="#" class="header-nav__link"> Контакты </a>
-              </li>
-            </ul>
-          </nav>
-          <!-- ./ End of .header__nav -->
-
           <!-- header__contacts -->
           <div class="header__contacts">
             <!-- header__social-wrap -->
@@ -62,10 +65,10 @@
       </div>
       <!-- ./ End of .header__content -->
 
-      <button class="j_header-toggle header__toggle">
-        <svg class="header__toggle-icon">
-          <use xlink:href="svg/sprite.svg#menu"></use>
-        </svg>
+      <button class="hamburger j_toggleMenu" type="button">
+        <i></i>
+        <i></i>
+        <i></i>
       </button>
     </div>
     <!-- ./ End of wrap -->

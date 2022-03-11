@@ -34,8 +34,6 @@ body {
 
 main {
   flex-grow: 1;
-  overflow-x: hidden;
-  background-color: var(--bg-color);
 }
 
 .container {
@@ -45,20 +43,18 @@ main {
   margin: 0 auto;
 
   &--lg {
-    max-width: calc(1716px + (68px * 2));
-    padding-right: 68px;
-    padding-left: 68px;
-    margin: 0 auto;
+    max-width: calc(1716px + (1rem * 2));
+    padding: 0 1rem;
 
-    @include max-width(1280px) {
-      padding-right: 40px;
-      padding-left: 40px;
-    }
+    // @include max-width(1280px) {
+    //   padding-right: 40px;
+    //   padding-left: 40px;
+    // }
 
-    @include max-width(768px) {
-      padding-right: 16px;
-      padding-left: 16px;
-    }
+    // @include max-width(768px) {
+    //   padding-right: 16px;
+    //   padding-left: 16px;
+    // }
   }
 }
 
@@ -99,6 +95,7 @@ a {
   color: var(--primary-default, inherit);
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.2s ease;
 
   &:hover {
     color: var(--primary-hover);

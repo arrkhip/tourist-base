@@ -45,6 +45,21 @@ module.exports = merge(common, {
       // SCSS
       {
         test: /\.(scss|css)$/,
+        include: [path.join(paths.src, '/scss/inline/')],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+            },
+          },
+        ],
+      },
+      // SCSS
+      {
+        test: /\.(scss|css)$/,
         exclude: [path.join(paths.src, '/scss/inline/')],
         use: [
           {
@@ -73,21 +88,6 @@ module.exports = merge(common, {
               },
             },
           },
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
-          },
-        ],
-      },
-      // SCSS
-      {
-        test: /\.(scss|css)$/,
-        include: [path.join(paths.src, '/scss/inline/')],
-        use: [
-          'style-loader',
-          'css-loader',
           {
             loader: 'sass-loader',
             options: {

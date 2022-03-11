@@ -1,18 +1,75 @@
-const buttonOpenMenu = document.querySelector('.j_header-toggle');
-const menu = document.querySelector('.j_menu');
+import Helper from '@helpers/Helper';
 
-const toggleMobileMenu = () => {
-  buttonOpenMenu.classList.toggle('active');
-  menu.classList.toggle('active');
+class Header {
+  constructor($header) {
+    this.$header = $header;
+    this.currentScroll = window.pageYOffset;
+
+    this._isHidden = this.$header.classList.contains('hidden');
+
+    this._init();
+  }
+
+  _init() {
+    if (!this.$header) return false;
+
+    // document.addEventListener('DOMContentLoaded', () => this.checkDevice());
+
+    if (window.scrollbar) {
+      window.scrollbar.addListener((status) =>
+        this.checkPosition(status.offset.y)
+      );
+
+      window.pageloader &&
+        window.pageloader.on('contentReplaced', () => {
+          window.scrollbar.addListener((status) =>
+            this.checkPosition(status.offset.y)
+          );
+        });
+    } else {
+      window.addEventListener('scroll', () =>
+        this.checkPosition(window.pageYOffset)
+      );
+    }
+  }
+
+  checkPosition(position) {
+    position !== 0
+      ? this.$header.classList.add('fixed')
+      : this.$header.classList.remove('fixed');
+
+    this.currentScroll = window.pageYOffset;
+  }
+
+  checkDevice() {
+    if (document.body.clientHeight >= window.innerHeight) {
+      if (Helper.isMobileOrTablet()) {
+        document.body.classList.add('touch-device');
+      } else if ($header.offsetWidth === window.innerWidth) {
+        this.$header.style.paddingRight = `${Helper.getScrollBarWidth()}px`;
+      }
+    }
+  }
+
+  hide() {
+    if (this._isHidden) return false;
+    this.$header.classList.add('hidden');
+    this._isHidden = true;
+  }
+
+  show() {
+    if (!this._isHidden) return false;
+    this.$header.classList.remove('hidden');
+    this._isHidden = false;
+  }
 }
 
-buttonOpenMenu.addEventListener('click', toggleMobileMenu); 
+const $header = document.querySelector('.header');
 
+let header = null;
 
-// Закрытие меню при клике вне меню
-window.addEventListener('click', (e) => { 
-  const target = e.target;
-  if (!target.closest('.header__inner') && !target.closest('.j_header-toggle')) { 
-    menu.classList.remove('active');
-  }
-});
+if ($header) header = new Header($header);
+
+export { header };
+
+window.header = header;

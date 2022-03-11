@@ -1,6 +1,7 @@
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: var(--vh, 100vh);
+  padding-top: var(--header-height, 72px);
 
   &__slide {
     display: flex;

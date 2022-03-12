@@ -53,8 +53,8 @@ $phone: 600px;
 $phone-sm: 350px;
 
 // container
-$container-max-width: calc(1470px + 2rem);
-$container-padding: 0 1rem;
+$container-max-width: calc(1470px + (2 * 16px));
+$container-padding: 0 16px;
 
 // section
 $section-padding: 60px 0;

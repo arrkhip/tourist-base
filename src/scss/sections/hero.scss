@@ -1,38 +1,276 @@
-.hero {
+.hero-section {
   position: relative;
-  min-height: var(--vh, 100vh);
+  z-index: 2;
+  display: flex;
+  height: var(--vh, 100vh);
+  min-height: 650px;
   padding-top: var(--header-height, 72px);
+  color: var(--white);
 
-  &__slide {
-    display: flex;
-    align-items: center;
+  @include max-width($touch) {
+    min-height: 520px;
+  }
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero-bg-slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-bg-slider {
+  height: 100%;
+}
+
+.hero-bg-slide {
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  &__banner {
+  &__video {
+    object-fit: cover;
+  }
+
+  .plyr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+
+    &__poster {
+      background-size: cover;
+    }
+  }
+}
+
+.hero__wrap {
+  display: flex;
+  height: 100%;
+  padding: 64px 0;
+
+  @include max-height(700px) {
+    padding: 40px 0;
+  }
+
+  @include max-width($desktop-sm) {
+    padding: 32px 0;
+  }
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hero-text-slider-wrapper {
+  height: 240px;
+  margin: auto 0;
+
+  @include max-width($touch) {
+    height: 180px;
+  }
+}
+
+.hero-text-slider {
+  height: 100%;
+  overflow: visible;
+  perspective: 1000px;
+
+  .swiper-wrapper {
+    max-height: 1px;
+    transform-origin: 0 0 !important;
+  }
+}
+
+.hero-text-slide {
+  visibility: hidden;
+  // background-color: rgba(#ccc, 0.5);
+  // backface-visibility: hidden;
+  opacity: 0;
+
+  &.transition {
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  // &.swiper-slide-prev,
+  // &.swiper-slide-active,
+  // &.swiper-slide-next {
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
+
+  &.swiper-slide-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 45.0625rem;
+    height: 100%;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include max-width($touch) {
+      margin-top: 16px;
+      font-size: 16px;
+    }
+  }
+}
+
+.hero-slider-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 796px;
+  margin-top: auto;
+  margin-left: auto;
+
+  @include max-width($touch) {
+    padding-right: 36px;
+  }
+}
+
+.hero-slider-navigation {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 16px;
+
+  @include max-width($touch) {
+    display: none;
+  }
+
+  .button-icon {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.hero-slider {
+  width: 100%;
+  max-width: 724px;
+  overflow: visible;
+}
+
+.hero-slide {
+  position: relative;
+  cursor: pointer;
+
+  &.transition {
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  &:hover {
+    &::before {
+      background-color: var(--secondary-1);
+      transform: none;
+    }
+
+    .hero-slide__bg {
+      transform: scale(1.1);
+    }
+  }
+
+  &.swiper-slide-active {
+    &::before {
+      background-color: var(--white);
+      transform: none;
+    }
+  }
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-color: transparent;
+    transition: background-color 0.2s ease, transform 0.4s ease;
+    transform: scaleY(0);
+    transform-origin: 100% 0;
+
+    @include max-width($touch) {
+      height: 2px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-family: $main-font;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1;
+    color: var(--white);
+    text-align: right;
+    content: attr(data-count);
+
+    @include max-width($touch) {
+      right: 4px;
+      bottom: 4px;
+      font-size: 12px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 68.42105%;
+    overflow: hidden;
+  }
+
+  &__bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__info {
-    position: relative;
-    max-width: 721px;
-    color: var(--white);
-  }
-
-  &__title {
-    margin-bottom: 24px;
-  }
-
-  &__descr {
-    font: 300 1.5rem / 1.5rem $second-font;
+    transition: transform 0.4s ease;
+    object-fit: cover;
   }
 }

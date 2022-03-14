@@ -11,12 +11,15 @@ html {
   --bg-color: var(--bg-main);
   --header-color: var(--white);
 
+  overflow-x: hidden;
+
   @include defineColorRGB(--primary-disable, $primary-disable);
   @include defineColorRGB(--primary-default, $primary-default);
   @include defineColorRGB(--primary-hover, $primary-hover);
   @include defineColorRGB(--success, $success);
   @include defineColorRGB(--error, $error);
   @include defineColorRGB(--black, $black);
+  @include defineColorRGB(--white, $white);
 }
 
 html,

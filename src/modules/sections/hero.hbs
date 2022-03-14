@@ -1,22 +1,177 @@
 <!-- hero -->
-<section class="hero">
-  <div class="hero__wrapper">
-    <div class="hero__slider">
-      <div class="swiper-slider">
+<section class="hero-section">
+  <div class="hero">
+    <div class="hero-bg-slider-wrapper">
+      <div class="hero-bg-slider swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="hero__slide">
-              <div class="hero__banner">
-                <img src="img/hero-bg-1.jpg" alt="" />
+          <div class="hero-bg-slide swiper-slide">
+            <!-- <img
+              src="../../img/hero-bg-1.jpg"
+              alt=""
+              class="hero-bg-slide__img"
+            /> -->
+
+            <video
+              class="hero-bg-slide__video"
+              id="hero-slide-video"
+              playsinline
+              data-poster="images/hero-bg-1.jpg"
+            >
+              <source
+                data-src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="hero-bg-slide swiper-slide">
+            <img
+              src="../../img/hero-bg-2.jpg"
+              alt=""
+              class="hero-bg-slide__img"
+            />
+          </div>
+          <div class="hero-bg-slide swiper-slide">
+            <img
+              src="../../img/hero-bg-3.jpg"
+              alt=""
+              class="hero-bg-slide__img"
+            />
+          </div>
+          <div class="hero-bg-slide swiper-slide">
+            <img
+              src="../../img/hero-bg-4.jpg"
+              alt=""
+              class="hero-bg-slide__img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__wrap">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <div class="hero-text-slider-wrapper">
+              <div class="hero-text-slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="hero-text-slide swiper-slide">
+                    <div class="hero-text-slide__wrap">
+                      <div class="hero-text-slide__content">
+                        <h1 class="hero-text-slide__title">
+                          Туристический комплекс «Белая река Даховская»
+                        </h1>
+
+                        <p class="hero-text-slide__text">
+                          Увлекательный отдых в красочных горах Адыгеи
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-text-slide swiper-slide">
+                    <div class="hero-text-slide__wrap">
+                      <div class="hero-text-slide__content">
+                        <h1 class="hero-text-slide__title">
+                          Туристический «Белая Даховская»
+                        </h1>
+
+                        <p class="hero-text-slide__text">
+                          Увлекательный отдых в красочных горах отдых в
+                          красочных Адыгеи
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-text-slide swiper-slide">
+                    <div class="hero-text-slide__wrap">
+                      <div class="hero-text-slide__content">
+                        <h1 class="hero-text-slide__title">
+                          Туристический комплекс комплекс «Белая река Даховская
+                          Даховская»»
+                        </h1>
+
+                        <p class="hero-text-slide__text">
+                          Увлекательный отдых в красочных горах Адыгеи отдых в
+                          красочных горах Адыгеи
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-text-slide swiper-slide">
+                    <div class="hero-text-slide__wrap">
+                      <div class="hero-text-slide__content">
+                        <h1 class="hero-text-slide__title">
+                          Туристический комплекс
+                        </h1>
+
+                        <p class="hero-text-slide__text">
+                          Увлекательный отдых
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="hero__info">
-                .<div class="container">
-                  <h1 class="hero__title h1">
-                    Туристический комплекс «Белая река Даховская»
-                  </h1>
-                  <p class="hero__descr">
-                    Увлекательный отдых в красочных горах Адыгеи
-                  </p>
+            </div>
+          </div>
+
+          <div class="hero-slider-wrapper">
+            <div class="hero-slider-navigation">
+              <button
+                class="button button-icon button-icon--next"
+                type="button"
+              >
+                <svg class="svg">
+                  <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+              <button
+                class="button button-icon button-icon--prev"
+                type="button"
+              >
+                <svg class="svg">
+                  <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div data-slider-delay="4000" class="hero-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="hero-slide swiper-slide">
+                  <div class="hero-slide__wrap">
+                    <img
+                      src="../../img/hero-bg-1.jpg"
+                      alt=""
+                      class="hero-slide__bg"
+                    />
+                  </div>
+                </div>
+                <div class="hero-slide swiper-slide">
+                  <div class="hero-slide__wrap">
+                    <img
+                      src="../../img/hero-bg-2.jpg"
+                      alt=""
+                      class="hero-slide__bg"
+                    />
+                  </div>
+                </div>
+                <div class="hero-slide swiper-slide">
+                  <div class="hero-slide__wrap">
+                    <img
+                      src="../../img/hero-bg-3.jpg"
+                      alt=""
+                      class="hero-slide__bg"
+                    />
+                  </div>
+                </div>
+                <div class="hero-slide swiper-slide">
+                  <div class="hero-slide__wrap">
+                    <img
+                      src="../../img/hero-bg-4.jpg"
+                      alt=""
+                      class="hero-slide__bg"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

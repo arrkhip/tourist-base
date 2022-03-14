@@ -25,6 +25,7 @@ h1,
 
   @include max-width($touch) {
     font-size: $h-one-font-size-sm;
+    line-height: 1.5;
   }
 }
 h2,
@@ -38,6 +39,7 @@ h2,
 
   @include max-width($touch) {
     font-size: $h-two-font-size-sm;
+    line-height: 1.5;
   }
 }
 h3,

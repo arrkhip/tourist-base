@@ -51,9 +51,9 @@ button {
   transition-timing-function: ease;
   appearance: none;
 
-  @include max-width($touch) {
-    padding: $button-padding-sm;
-  }
+  // @include max-width($touch) {
+  //   padding: $button-padding-sm;
+  // }
 
   @media (hover) {
     &:hover {

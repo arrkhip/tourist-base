@@ -267,6 +267,24 @@ button {
     }
   }
 
+  &--blur {
+    --bg-color: rgba(var(--white-rgb), 0.4);
+    --bg-color-hover: rgba(var(--white-rgb), 0.6);
+    --bg-color-focus: rgba(var(--white-rgb), 0.6);
+    --color: var(--primary-hover);
+    --color-hover: var(--primary-hover);
+    --color-focus: var(--primary-hover);
+    --border-color: rgba(var(--white-rgb), 0.4);
+    --border-color-hover: rgba(var(--white-rgb), 0.6);
+    --border-color-focus: rgba(var(--white-rgb), 0.6);
+
+    backdrop-filter: blur(20px);
+
+    &:focus {
+      box-shadow: 0 0 0 2px var(--secondary-1);
+    }
+  }
+
   &--white {
     --bg-color: var(--white);
     --bg-color-hover: var(--secondary-2);

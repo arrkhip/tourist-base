@@ -20,6 +20,7 @@ html {
   @include defineColorRGB(--error, $error);
   @include defineColorRGB(--black, $black);
   @include defineColorRGB(--white, $white);
+  @include defineColorRGB(--secondary-3, $secondary-3);
 }
 
 html,
@@ -46,8 +47,8 @@ main {
   margin: 0 auto;
 
   &--lg {
-    max-width: calc(1716px + (1rem * 2));
-    padding: 0 1rem;
+    max-width: calc(1716px + (2 * 16px));
+    padding: 0 16px;
 
     // @include max-width(1280px) {
     //   padding-right: 40px;
@@ -107,4 +108,56 @@ a {
 
 mark {
   background-color: var(--primary-disable);
+}
+
+// swiper
+.slider-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+
+  @include max-width($touch) {
+    margin-top: 24px;
+  }
+
+  .slider-scrollbar {
+    margin-right: 7.75rem;
+  }
+
+  .slider-navigation {
+    margin-left: auto;
+  }
+}
+
+.slider-navigation {
+  display: inline-flex;
+
+  .button-icon {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+}
+
+.slider-scrollbar {
+  flex-grow: 1;
+  height: 1px;
+  cursor: pointer;
+  background-color: var(--secondary-1);
+  border-radius: 0;
+
+  .swiper-scrollbar-drag {
+    top: auto;
+    bottom: 2px;
+    height: 3px;
+    background-color: var(--black);
+    border-radius: 0;
+  }
 }

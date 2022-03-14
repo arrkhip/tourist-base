@@ -1,20 +1,57 @@
-.offers {
-  padding: 100px 0;
+.offers-section {
+  padding: 144px 0 100px;
+  overflow: hidden;
 
-  &__container {
-    max-width: calc(1716px + (68px * 2));
-    padding-right: 68px;
-    padding-left: 68px;
-    margin: 0 auto;
+  @include max-width($desktop-sm) {
+    padding: 80px 0 60px;
+  }
 
-    @include max-width(1280px) {
-      padding-right: 40px;
-      padding-left: 40px;
+  @include max-width($touch) {
+    padding: 40px 0;
+  }
+}
+
+.offers__container {
+  // max-width: calc(1716px + (68px * 2));
+  // padding-right: 68px;
+  // padding-left: 68px;
+  // margin: 0 auto;
+
+  // @include max-width(1280px) {
+  //   padding-right: 40px;
+  //   padding-left: 40px;
+  // }
+
+  // @include max-width(768px) {
+  //   padding-right: 16px;
+  //   padding-left: 16px;
+  // }
+}
+
+.offers-slider {
+  overflow: visible;
+
+  @include max-width($touch) {
+    padding-right: 36px;
+  }
+
+  &.lock {
+    + .offers-slider-footer {
+      display: none;
     }
+  }
+}
 
-    @include max-width(768px) {
-      padding-right: 16px;
-      padding-left: 16px;
+.offers-slider-footer {
+  .offers-slider-scrollbar {
+    @include max-width($touch) {
+      margin-right: 0;
     }
+  }
+}
+
+.offers-slider-navigation {
+  @include max-width($touch) {
+    display: none;
   }
 }

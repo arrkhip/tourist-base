@@ -6,15 +6,15 @@ button {
 .button {
   --color: var(--white);
   --color-hover: var(--white);
-  --color-disable: var(--white);
+  --color-disable: var(--black);
   --color-focus: var(--white);
   --bg-color: var(--primary-default);
   --bg-color-hover: var(--primary-hover);
-  --bg-color-disable: var(--primary-disable);
+  --bg-color-disable: rgba(var(--secondary-3-rgb), 0.5);
   --bg-color-focus: var(--primary-active);
   --border-color: var(--primary-default);
   --border-color-hover: var(--primary-hover);
-  --border-color-disable: var(--primary-disable);
+  --border-color-disable: rgba(var(--secondary-3-rgb), 0.5);
   --border-width: #{$button-border-width};
   --font-size: #{$button-font-size};
   --padding: #{$button-padding};
@@ -267,8 +267,24 @@ button {
     }
   }
 
+  &--white {
+    --bg-color: var(--white);
+    --bg-color-hover: var(--secondary-2);
+    --bg-color-focus: var(--secondary-2);
+    --color: var(--black);
+    --color-hover: var(--black);
+    --color-focus: var(--black);
+    --border-color: var(--white);
+    --border-color-hover: var(--white);
+    --border-color-focus: var(--white);
+
+    &:focus {
+      box-shadow: 0 0 0 2px var(--secondary-1);
+    }
+  }
+
   &-icon {
-    --size: 40px;
+    --size: 56px;
     --padding: 10px;
 
     width: var(--size);
@@ -286,6 +302,7 @@ button {
     svg {
       position: relative;
       margin: 0;
+      font-size: 16px;
 
       &::before {
         top: 50%;

@@ -5,6 +5,7 @@
   height: var(--vh, 100vh);
   min-height: 650px;
   padding-top: var(--header-height, 72px);
+  overflow: hidden;
   color: var(--white);
 
   @include max-width($touch) {

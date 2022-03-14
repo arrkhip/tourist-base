@@ -1,14 +1,51 @@
 <!-- offers -->
-<section class="offers">
-  <div class="offers__container">
-    <div class="offers__slider">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            {{> components/card-offer }}
+<section class="offers-section">
+  <div class="container container--lg">
+    <div class="offers">
+      <div class="offers__container">
+        <div class="offers-slider-wrapper">
+          <div class="offers-slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                {{> components/card-offer }}
+              </div>
+              <div class="swiper-slide">
+                {{> components/card-offer }}
+              </div>
+              <div class="swiper-slide">
+                {{> components/card-offer }}
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-footer offers-slider-footer">
+            <div
+              class="slider-scrollbar offers-slider-scrollbar swiper-scrollbar"
+            >
+            </div>
+
+            <div class="slider-navigation offers-slider-navigation">
+              <button
+                class="button button--white button-icon button-icon--prev"
+                type="button"
+              >
+                <svg class="svg">
+                  <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+              <button
+                class="button button--white button-icon button-icon--next"
+                type="button"
+              >
+                <svg class="svg">
+                  <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div> <!-- ./ End of container -->
-</section> <!-- ./ End of offers -->
+  </div>
+</section>
+<!-- ./ End of offers -->

@@ -1,24 +1,43 @@
 .card-offer {
-  // max-width: 1716px;
+  .swiper-slide & {
+    height: 100%;
+  }
 
   &__wrapper {
     display: flex;
-    min-height: 764px;
-    // 1500px min-height: 625px;
+
+    @include max-width($touch) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__info {
     display: flex;
     flex-shrink: 1.4;
     align-items: center;
-    // width: 36.13%;
     width: 100%;
     max-width: 620px;
-    padding-left: 124px;
-    // padding-left: 20%;
+    // min-height: 764px;
+    min-height: 39.79166666vw;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 7.23%;
     background-color: var(--white);
 
-    // 1500px pl:60px;
+    @include max-width($touch) {
+      display: block;
+      max-width: none;
+      min-height: auto;
+      padding: 32px 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
   }
 
   &__banner {
@@ -26,73 +45,78 @@
     width: 100%;
     max-width: 1096px;
 
+    @include max-width($touch) {
+      width: 100%;
+      height: 204px;
+    }
+
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
-
-    // Width < 1500px flex-shrink: 1.5;
   }
 
   &__sale {
     margin-bottom: 40px;
+    font-size: 6rem;
     font-weight: 800;
+    line-height: 1.1668;
     color: var(--primary-default);
+
+    @include max-width($desktop-sm) {
+      font-size: 4rem;
+    }
+
+    @include max-width($touch) {
+      margin-bottom: 0;
+      font-size: 36px;
+      line-height: 1.55555;
+    }
+  }
+
+  &__title-wrapper {
+    position: relative;
+    width: 121%;
+    margin-bottom: 40px;
+
+    @include max-width($touch) {
+      width: auto;
+      padding-right: 32px;
+      margin-bottom: 16px;
+    }
   }
 
   &__title {
-    position: relative;
-    margin-right: -27px;
-    margin-bottom: 120px;
+    display: inline;
+    padding-right: 16px;
     background-color: var(--white);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 
-    // 1500px pb:60
+    @include max-width($desktop-sm) {
+      font-size: 2.6rem;
+    }
+
+    @include max-width($touch) {
+      display: block;
+      padding-right: 0;
+      font-size: 24px;
+      line-height: 1.5;
+      background-color: inherit;
+      box-decoration-break: unset;
+    }
   }
 
   &__descr {
     max-width: 423px;
+    margin-top: auto;
     font-size: 1.5rem;
-    line-height: 1.5em;
-  }
+    line-height: 1.5;
 
-  @include max-width(768px) {
-    max-width: 292px;
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column-reverse;
-      // проверь
-      // check this method
-      min-height: auto;
-    }
-
-    &__info {
-      display: block;
-      padding: 32px 20px;
-    }
-
-    &__sale {
-      margin-bottom: 0;
-      font-size: 2.769rem;
-      line-height: 1.556em;
-    }
-
-    &__title {
-      margin-bottom: 16px;
-      background-color: inherit;
-    }
-
-    &__descr {
-      max-width: 100%;
-      max-width: initial;
-      font-size: 1.231rem;
-    }
-
-    &__banner {
-      width: 100%;
-      // Test this properti
-      height: 204px;
+    @include max-width($touch) {
+      max-width: none;
+      font-size: 16px;
     }
   }
 }

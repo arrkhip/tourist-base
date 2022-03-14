@@ -1,18 +1,44 @@
 .about {
   padding: 100px 0;
 
+  @include max-width($desktop-sm) {
+    padding: 60px 0;
+  }
+
+  @include max-width($touch) {
+    padding: 40px 0;
+  }
+
   &__decor-title {
+    margin-bottom: -52px;
     font-size: 9rem;
     font-weight: 700;
     line-height: 1.389;
     // -webkit-text-stroke: 1px white;
     // -webkit-text-fill-color: transparent;
     color: var(--bg-main);
-    text-shadow: -0 -1px 0 #fff, 0 -1px 0 #fff, -0 1px 0 #fff, 0 1px 0 #fff,
-      -1px -0 0 #fff, 1px -0 0 #fff, -1px 0 0 #fff, 1px 0 0 #fff,
-      -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff,
-      -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: -0 -1px 0 var(--white), 0 -1px 0 var(--white),
+      -0 1px 0 var(--white), 0 1px 0 var(--white), -1px -0 0 var(--white),
+      1px -0 0 var(--white), -1px 0 0 var(--white), 1px 0 0 var(--white),
+      -1px -1px 0 var(--white), 1px -1px 0 var(--white), -1px 1px 0 var(--white),
+      1px 1px 0 var(--white), -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
     text-transform: uppercase;
+    white-space: nowrap;
+
+    @include max-width($touch) {
+      margin-bottom: -17px;
+      font-size: 36px;
+      line-height: 1.555555;
+      text-shadow: -0 -0.6px 0 var(--white), 0 -0.6px 0 var(--white),
+        -0 0.6px 0 var(--white), 0 0.6px 0 var(--white),
+        -0.6px -0 0 var(--white), 0.6px -0 0 var(--white),
+        -0.6px 0 0 var(--white), 0.6px 0 0 var(--white),
+        -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
+        -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white),
+        -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
+        -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
+    }
 
     // &--top {
     // }

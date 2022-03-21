@@ -1,0 +1,37 @@
+.rooms-section {
+  overflow: hidden;
+}
+
+.rooms__headline {
+  display: inline-flex;
+  align-items: baseline;
+  margin-bottom: 3.5rem;
+
+  @include max-width($touch) {
+    margin-bottom: 20px;
+  }
+
+  a,
+  .link {
+    margin-left: 2.25rem;
+    font-size: 1.5rem;
+    border-bottom: 1px dashed currentColor;
+
+    @include max-width($touch) {
+      margin-left: 12px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: var(--primary-hover);
+    }
+  }
+}
+
+.rooms-slider {
+  overflow: visible;
+
+  @include max-width($touch) {
+    padding-right: 30px;
+  }
+}

@@ -51,7 +51,6 @@ if ($slider) {
         });
       },
       update(swiper) {
-        console.log(swiper);
         if (swiper.slides.length <= swiper.params.slidesPerView) {
           swiper.$el[0].classList.add('lock');
         } else {

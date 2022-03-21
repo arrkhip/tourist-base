@@ -42,15 +42,15 @@
   }
 }
 
-.offers-slider-footer {
-  .offers-slider-scrollbar {
+.slider-footer {
+  .slider-scrollbar {
     @include max-width($touch) {
       margin-right: 0;
     }
   }
 }
 
-.offers-slider-navigation {
+.slider-navigation {
   @include max-width($touch) {
     display: none;
   }

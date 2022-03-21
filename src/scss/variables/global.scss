@@ -95,7 +95,8 @@ svg {
   fill: currentColor;
 }
 
-a {
+a,
+.link {
   color: var(--primary-default, inherit);
   text-decoration: none;
   cursor: pointer;

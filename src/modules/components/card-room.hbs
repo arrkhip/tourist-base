@@ -1,36 +1,43 @@
 <div class="card-room">
   <div class="card-room__banner">
-    <div class="card-room__slider">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="card-room__slide swiper-slide">
-            <div class="card-room__photo-wrap">
-              <picture class="card-room__photo">
-                <!-- <source srcset="images/room-1.webp" /> -->
-                <img src="../../img/room-1.jpg" />
-              </picture>
+    <div class="card-room-slider-wrapper">
+      <div class="card-room-slider-inner">
+        <div class="card-room-slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="card-room__slide swiper-slide">
+              <div class="card-room__img-wrapper">
+                <img
+                  data-src="../../img/room-1.jpg"
+                  alt=""
+                  class="card-room__img swiper-lazy"
+                />
+                <div class="swiper-lazy-preloader"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="card-room__slide swiper-slide">
-            <div class="card-room__photo-wrap">
-              <picture class="card-room__photo">
-                <!-- <source srcset="images/room-1.webp" /> -->
-                <img src="../../img/room-1.jpg" />
-              </picture>
+            <div class="card-room__slide swiper-slide">
+              <div class="card-room__img-wrapper">
+                <img
+                  data-src="../../img/room-2.jpg"
+                  alt=""
+                  class="card-room__img swiper-lazy"
+                />
+                <div class="swiper-lazy-preloader"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="card-room__slide swiper-slide">
-            <div class="card-room__photo-wrap">
-              <picture class="card-room__photo">
-                <!-- <source srcset="images/room-1.webp" /> -->
-                <img src="../../img/room-1.jpg" />
-              </picture>
+            <div class="card-room__slide swiper-slide">
+              <div class="card-room__img-wrapper">
+                <img
+                  data-src="../../img/room-1.jpg"
+                  alt=""
+                  class="card-room__img swiper-lazy"
+                />
+                <div class="swiper-lazy-preloader"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="card-room-slider-pagination swiper-pagination"></div>
     </div>
   </div>
 

@@ -1,46 +1,58 @@
 <!-- rooms -->
-<section class="rooms">
+<section class="rooms-section">
   <div class="container container--lg">
-    <div class="rooms__headline">
-      <h2> Номерной фонд </h2>
-      <a href="#"> Карта-схема фонда </a>
-    </div>
+    <div class="rooms">
+      <div class="rooms__headline">
+        <h2> Номерной фонд </h2>
+        <span class="link"> Карта-схема </span>
+      </div>
 
-    <div class="rooms__wrapper">
-      <div class="card-room">
-        <div class="card-room__banner">
-          <div class="card-room__slider">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="card-room__slide swiper-slide">
-                  <div class="card-room__photo-wrap">
-                    <picture class="card-room__photo">
-                      <!-- <source srcset="images/room-1.webp" /> -->
-                      <img src="../../img/room-1.jpg" />
-                    </picture>
-                  </div>
-                </div>
+      <div class="rooms__wrapper">
+        <div class="rooms-slider-wrapper">
+          <div class="rooms-slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="rooms-slide swiper-slide">
+                {{> ../components/card-room }}
+              </div>
+              <div class="rooms-slide swiper-slide">
+                {{> ../components/card-room }}
+              </div>
+              <div class="rooms-slide swiper-slide">
+                {{> ../components/card-room }}
+              </div>
+              <div class="rooms-slide swiper-slide">
+                {{> ../components/card-room }}
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="card-room__content">
-          <div class="card-room__info">
-            <div class="card-room__title">
-              Двухместный стандарт — 20 номеров в домах срубах
+          <div class="slider-footer offers-slider-footer">
+            <div
+              class="slider-scrollbar rooms-slider-scrollbar swiper-scrollbar"
+            >
             </div>
-            <a href="#" class="card-room__link"> Показать на карте </a>
-          </div>
 
-          <div class="card-room__total">
-            <div class="card-room__price"> от 2 390 ₽ </div>
-            <button class="card-room__button button"> Забронировать </button>
+            <div class="slider-navigation rooms-slider-navigation">
+              <button
+                class="button button--white button-icon button-icon--prev"
+                type="button"
+              >
+                <svg class="svg">
+                  <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+              <button
+                class="button button--white button-icon button-icon--next"
+                type="button"
+              >
+                <svg class="svg">
+                  <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-        <!-- End card-room__content -->
       </div>
-      <!-- End card-room -->
     </div>
   </div>
   <!-- ./ End of container -->

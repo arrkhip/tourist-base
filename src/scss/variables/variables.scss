@@ -44,6 +44,12 @@ $ripple-secondary: radial-gradient(
   rgba(var(--primary-hover-rgb), 0) 70%
 );
 
+:root {
+  --plyr-color-main: var(--primary-default);
+  --plyr-menu-background: var(--bg-main);
+  --swiper-theme-color: var(--primary-default);
+}
+
 /* Global */
 // media
 $desktop-sm: 1200px;

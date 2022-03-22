@@ -1,3 +1,254 @@
 .footer {
-  background-color: #fff;
+  // padding: 22.6875rem 0 9rem;
+  padding: 18.90625vw 0 7.5vw;
+  background-image: url(../img/hero-bg-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max-width($touch) {
+    padding: 56px 0;
+  }
+}
+
+.footer__card {
+  width: 100%;
+  background-color: var(--white);
+}
+
+.footer__wrap {
+  display: flex;
+
+  @include max-width($touch) {
+    flex-direction: column;
+  }
+}
+
+.footer__left {
+  width: 100%;
+  max-width: 54.25rem;
+  // padding: 6.5rem 9rem 5.25rem 7.75rem;
+  padding: 5.41666666666vw 7.5vw 6.4583333333vw 4.375vw;
+
+  @include max-width(1300px) {
+    padding: 5.41666666666vw 4.375vw 6.4583333333vw;
+  }
+
+  @include max-width($tablet) {
+    padding: 40px;
+  }
+
+  @include max-width($touch) {
+    max-width: none;
+    padding: 32px 16px;
+  }
+
+  .footer__title {
+    margin-bottom: 2.375rem;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    @include max-width($touch) {
+      margin: 0 0 16px;
+      font-size: 18px;
+      line-height: 1.5555555;
+    }
+  }
+}
+
+.footer__form-wrapper {
+  overflow: hidden;
+}
+
+.footer__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px -8px;
+
+  @include max-width($touch) {
+    margin: -8px;
+  }
+
+  .footer__field {
+    width: calc(100% - 16px);
+    margin: 12px 8px;
+
+    @include max-width($touch) {
+      margin: 8px;
+    }
+
+    &--small {
+      width: calc(50% - 16px);
+
+      @include max-width($touch) {
+        width: calc(100% - 16px);
+        margin: 8px;
+      }
+    }
+  }
+}
+
+.footer__field {
+  width: 100%;
+
+  .input,
+  .input-wrapper {
+    margin: 0;
+  }
+
+  .textarea {
+    width: 100%;
+    height: 163px;
+    margin: 36px 0 0;
+
+    @include max-width($touch) {
+      margin: 16px 0 0;
+    }
+  }
+}
+
+.footer__form-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include max-width(1300px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+  }
+
+  @include max-width($touch) {
+    margin-top: 16px;
+  }
+
+  .button {
+    --min-width: 228px;
+
+    margin: 0 0 0 20px;
+
+    @include max-width(1300px) {
+      margin: 20px 0 0 auto;
+    }
+
+    @include max-width($touch) {
+      margin: 12px 0 0 auto;
+    }
+
+    @include max-width($phone) {
+      width: 100%;
+    }
+  }
+}
+
+.footer__right {
+  width: 100%;
+  max-width: 37.5rem;
+  // padding: 6.5rem 7.75rem 5.25rem;
+  padding: 5.41666666666vw 4.375vw 6.4583333333vw;
+  background-color: var(--bg-main);
+
+  @include max-width($tablet) {
+    padding: 40px;
+  }
+
+  @include max-width($touch) {
+    max-width: none;
+    padding: 32px 16px 16px;
+  }
+}
+
+.footer__block {
+  &:not(:last-child) {
+    margin-bottom: 44px;
+  }
+
+  .footer__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.footer__location {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--primary-default);
+}
+
+.footer__title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  @include max-width($phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+  }
+
+  .footer__location {
+    &:not(:first-child) {
+      margin-left: 16px;
+
+      @include max-width($phone) {
+        margin-top: 12px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__item {
+  display: inline-flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.footer__phone {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: currentColor;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--primary-hover);
+  }
+}
+
+.footer__text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.footer__inner {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.footer__container {
+  position: relative;
+  padding-bottom: 83.23863636%;
+}
+
+.footer__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--secondary-1-rgb), 0.2);
 }

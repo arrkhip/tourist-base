@@ -2,6 +2,7 @@
   box-sizing: border-box;
 
   &::selection {
+    color: var(--white);
     background: var(--primary-disable);
   }
 }
@@ -20,6 +21,7 @@ html {
   @include defineColorRGB(--error, $error);
   @include defineColorRGB(--black, $black);
   @include defineColorRGB(--white, $white);
+  @include defineColorRGB(--secondary-1, $secondary-1);
   @include defineColorRGB(--secondary-3, $secondary-3);
 }
 

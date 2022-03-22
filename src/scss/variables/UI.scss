@@ -463,12 +463,12 @@ button {
 /* Inputs && Textareas */
 .input,
 .textarea {
-  --color: var(--secondary-9);
-  --color-placeholder: var(--secondary-4);
-  --border-color: var(--secondary-4);
-  --border-color-hover: var(--primary-hover);
-  --border-color-focus: var(--primary-hover);
-  --background-color: var(--white);
+  --color: var(--main-color);
+  --color-placeholder: #828282;
+  --border-color: #bdbdbd;
+  --border-color-hover: var(--main-color);
+  --border-color-focus: var(--main-color);
+  --background-color: transparent;
 
   padding: $input-padding;
   margin: $input-margin;
@@ -479,19 +479,26 @@ button {
   line-height: $input-line-height;
   color: var(--color);
   background-color: var(--background-color);
-  border-color: var(--border-color);
-  border-style: solid;
-  border-width: $input-border-width;
+  border: none;
+  border-bottom-color: var(--border-color);
+  border-bottom-style: solid;
+  border-bottom-width: $input-border-width;
   border-radius: $input-border-radius;
   outline: transparent;
   appearance: none;
+  transition: border 0.2s ease;
 
-  @include max-width($desktop-sm) {
+  // @include max-width($desktop-sm) {
+  //   font-size: 14px;
+
+  //   @include placeholder() {
+  //     font-size: 14px;
+  //   }
+  // }
+
+  @include max-width($touch) {
+    padding: 5px 0 10px;
     font-size: 14px;
-
-    @include placeholder() {
-      font-size: 14px;
-    }
   }
 
   @include placeholder() {
@@ -499,9 +506,10 @@ button {
     font-size: $input-font-size;
     font-weight: $input-font-weight;
     line-height: $input-line-height;
-    color: var(--color-placeholder);
-    opacity: 1;
-    transition: transform 0.3s, opacity 0.3s;
+    // color: var(--color-placeholder);
+    // opacity: 1;
+    // transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
 
     @include max-width($desktop-sm) {
       font-size: 14px;
@@ -515,38 +523,49 @@ button {
   }
 
   &:focus {
-    border-color: var(--border-color-focus);
-    box-shadow: 0 0 0 2px rgba(var(--primary-disable-rgb), 0.5);
+    // border-color: var(--border-color-focus);
+    // box-shadow: 0 0 0 2px rgba(var(--primary-disable-rgb), 0.5);
 
-    @include placeholder() {
-      opacity: 0;
-      transform: translateX(100%);
+    // @include placeholder() {
+    //   opacity: 0;
+    //   transform: translateX(100%);
+    // }
+
+    ~ .input-placeholder {
+      color: var(--main-color);
+      transform: translateY(-100%);
     }
   }
 
   &:read-only {
+    pointer-events: none;
     cursor: default;
     box-shadow: none;
     opacity: 0.7;
 
-    @media (hover) {
-      &:hover {
-        border-color: var(--border-color);
-      }
+    // @media (hover) {
+    //   &:hover {
+    //     border-color: var(--border-color);
+    //   }
 
-      &:focus {
-        border-color: var(--border-color);
+    //   &:focus {
+    //     border-color: var(--border-color);
 
-        @include placeholder() {
-          opacity: 1;
-          transform: unset;
-        }
-      }
-    }
+    //     @include placeholder() {
+    //       opacity: 1;
+    //       transform: unset;
+    //     }
+    //   }
+    // }
   }
 
   &:not(:placeholder-shown) {
-    --border-color: var(--secondary-5);
+    // --border-color: var(--secondary-5);
+
+    ~ .input-placeholder {
+      color: var(--main-color);
+      transform: translateY(-100%);
+    }
   }
 
   &--square {
@@ -565,10 +584,15 @@ button {
   height: $textarea-height;
   padding: $textarea-padding;
   margin: $textarea-margin;
-  // resize: none;
+  resize: none;
+  border: 1px solid #bdbdbd;
 
   @include max-width($touch) {
     padding: $textarea-padding-sm;
+  }
+
+  @include placeholder() {
+    opacity: 1;
   }
 }
 
@@ -576,7 +600,13 @@ button {
 .input-wrapper {
   position: relative;
   display: inline-block;
+  width: 100%;
+  padding-top: 24px;
   margin: 5px;
+
+  @include max-width($touch) {
+    padding-top: 20px;
+  }
 
   .input__icon,
   .input__arrow {
@@ -605,16 +635,16 @@ button {
   .input {
     width: 100%;
     height: 100%;
-    padding-right: 2.75em;
-    padding-left: 1.25em;
+    // padding-right: 2.75em;
+    // padding-left: 1.25em;
     margin: 0;
 
-    + .input__icon {
+    ~ .input__icon {
       right: 1.25em;
       left: auto;
     }
 
-    + .input__clear {
+    ~ .input__clear {
       position: absolute;
       top: 50%;
       right: 0.5rem;
@@ -623,10 +653,24 @@ button {
       transform: translateY(-50%);
     }
 
+    ~ .input-error {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
     &:not(:placeholder-shown) {
-      + .input__clear {
+      ~ .input__clear {
         visibility: visible;
         opacity: 1;
+      }
+    }
+
+    &.invalid {
+      border-color: var(--error);
+
+      ~ .input-error {
+        display: block;
       }
     }
   }
@@ -655,12 +699,42 @@ button {
   }
 }
 
+.input-container {
+  position: relative;
+}
+
+.input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: $input-font-weight;
+  line-height: 1.5;
+  color: #bdbdbd;
+  pointer-events: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+  transform: translateY(8px);
+
+  @include max-width($touch) {
+    font-size: 14px;
+    line-height: 1.428571428;
+    transform: translate(5px);
+  }
+}
+
+.input-error {
+  display: none;
+  font-size: 12px;
+  line-height: 1.666666;
+  color: var(--error);
+}
+
 /* Checkboxes && Radios */
 .checkbox,
 .radio {
   position: relative;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   margin: $checkbox-margin;
   cursor: pointer;
 
@@ -679,8 +753,6 @@ button {
     &:checked + .checkbox__custom,
     &:checked + .radio__custom {
       background-color: $checkbox-bg-color-active;
-      box-shadow: inset 0 0 0 2px transparent,
-        0 0 0 2px rgba(var(--primary-disable-rgb), 0.5);
 
       .checkbox__icon,
       .radio__icon {
@@ -690,8 +762,6 @@ button {
 
     &:disabled + .checkbox__custom,
     &:disabled + .radio__custom {
-      box-shadow: inset 0 0 0 2px var(--secondary-2);
-
       &::after {
         position: absolute;
         top: 0;
@@ -712,7 +782,6 @@ button {
     &:disabled:checked + .checkbox__custom,
     &:disabled:checked + .radio__custom {
       background-color: var(--primary-disable);
-      box-shadow: none;
     }
   }
 
@@ -728,8 +797,15 @@ button {
     background-color: $checkbox-bg-color;
     border: $checkbox-border;
     border-radius: $checkbox-border-radius;
-    box-shadow: inset 0 0 0 2px #e0e5f2;
     transition: 0.2s ease;
+
+    @include max-width($touch) {
+      margin: 0 16px 0 0;
+    }
+
+    &:hover {
+      border-color: var(--primary-hover);
+    }
   }
 
   &__text {
@@ -741,8 +817,9 @@ button {
     line-height: $checkbox-line-height;
     color: $checkbox-color;
 
-    @include max-width($desktop-sm) {
-      font-size: 14px;
+    @include max-width($touch) {
+      font-size: 10px;
+      line-height: 1.6;
     }
 
     b {
@@ -766,7 +843,7 @@ button {
     width: $checkbox-icon-size;
     height: $checkbox-icon-size;
     opacity: 0;
-    fill: $checkbox-icon-color;
+    stroke: $checkbox-icon-color;
     transition: 0.3s;
   }
 }

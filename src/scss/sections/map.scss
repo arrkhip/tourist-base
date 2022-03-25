@@ -1,0 +1,303 @@
+.map-section {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.map {
+  width: 100%;
+
+  @include max-width($touch) {
+    max-height: 70vh;
+  }
+}
+
+.map__wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 51%;
+
+  @include max-width($phone) {
+    padding-bottom: 116%;
+  }
+}
+
+.map__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map__fakesvg {
+  display: none;
+}
+
+.map__instance {
+  width: 100%;
+  height: 100%;
+  // background-image: url(../img/map_bg.jpg);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    .tooltip-trigger {
+      cursor: pointer;
+
+      + path {
+        pointer-events: none;
+        + path {
+          pointer-events: none;
+          + path {
+            pointer-events: none;
+            + path {
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.map__panzoom {
+  width: 100%;
+  height: 100%;
+}
+
+.map__svg-wrapper {
+  width: 100%;
+  pointer-events: none;
+
+  @include max-width($touch) {
+    pointer-events: all;
+  }
+}
+
+.map__svg {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+
+  path {
+    pointer-events: all;
+  }
+
+  .tooltip-trigger {
+    cursor: pointer;
+
+    + path {
+      pointer-events: none;
+      + path {
+        pointer-events: none;
+        transition: fill 0.2s ease;
+        + path {
+          pointer-events: none;
+          + path {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      + path {
+        + path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+
+  path[name] {
+    cursor: pointer;
+    fill: transparent;
+    transition: fill 0.2s ease;
+
+    &:hover {
+      fill: #00467766;
+    }
+  }
+}
+
+.map__controls {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+
+  @include min-width($touch + 1px) {
+    display: none;
+  }
+
+  .button-icon {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// balloon
+// [data-tippy-root] {
+//   will-change: transform;
+// }
+
+.tippy-box {
+  max-width: 465px !important;
+  padding: 0;
+  color: var(--black);
+  background-color: transparent;
+  // background-color: var(--white);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.tippy-content {
+  padding: 0;
+}
+
+.tippy-arrow {
+  color: var(--white);
+}
+
+.balloon {
+  width: 465px;
+  padding: 16px;
+  color: var(--black);
+  background-color: var(--white);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+
+  @include max-width($phone) {
+    width: 240px;
+    max-width: calc(100vw - 32px);
+  }
+
+  &__wrap {
+    display: flex;
+
+    @include max-width($phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__img-wrapper {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 175px;
+    max-height: 154px;
+    margin-right: 16px;
+
+    @include max-width($phone) {
+      max-width: none;
+      height: 170px;
+      max-height: 170px;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 8px;
+    overflow: hidden;
+
+    @include max-width($phone) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8667;
+
+    @include max-width($phone) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include max-width($phone) {
+        margin-bottom: 8px;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: auto;
+
+    @include max-width($phone) {
+      flex-direction: column;
+    }
+
+    .button {
+      --font-size: 10px;
+      --padding: 0.668em 1.25em;
+
+      flex-grow: 1;
+      margin: 0;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+
+        @include max-width($phone) {
+          margin-right: 0;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+// region
+.tooltip-region {
+  // padding: 19px 38px;
+  padding: 1vw 2vw;
+  // font-size: 18px;
+  font-size: 0.9375vw;
+  line-height: 1.5556;
+  background-color: var(--white);
+  border-radius: 50px;
+}

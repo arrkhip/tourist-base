@@ -184,6 +184,18 @@ button {
     }
   }
 
+  &--invert {
+    --color: var(--primary-default);
+    --color-hover: var(--white);
+    --color-focus: var(--white);
+    --bg-color: transparent;
+    --bg-color-hover: var(--primary-default);
+    --bg-color-focus: var(--primary-default);
+    --border-color: var(--primary-default);
+    --border-color-hover: var(--primary-default);
+    --border-color-focus: var(--primary-default);
+  }
+
   &--flat {
     --color: var(--primary-default);
     --color-hover: var(--primary-hover);
@@ -279,6 +291,7 @@ button {
     --border-color-focus: rgba(var(--white-rgb), 0.6);
 
     backdrop-filter: blur(20px);
+    border: none;
 
     &:focus {
       box-shadow: 0 0 0 2px var(--secondary-1);
@@ -336,6 +349,16 @@ button {
 
     &.button--flat {
       --size: auto;
+    }
+
+    &--control {
+      --size: 40px;
+
+      border-radius: 8px;
+
+      .svg {
+        font-size: 20px;
+      }
     }
   }
 

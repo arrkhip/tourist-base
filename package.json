@@ -62,13 +62,15 @@
     "webpack-merge": "^5.4.0"
   },
   "dependencies": {
+    "@panzoom/panzoom": "^4.4.4",
     "core-js": "^3.8.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-webp-webpack-plugin": "^3.3.3",
     "imagemin-webpack-plugin": "^2.4.2",
     "plyr": "^3.6.12",
     "scroll-lock": "^2.1.4",
-    "swiper": "6.6.2"
+    "swiper": "6.6.2",
+    "tippy.js": "^6.3.7"
   },
   "husky": {
     "hooks": {

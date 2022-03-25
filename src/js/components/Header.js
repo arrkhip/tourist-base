@@ -15,22 +15,13 @@ class Header {
 
     // document.addEventListener('DOMContentLoaded', () => this.checkDevice());
 
-    if (window.scrollbar) {
-      window.scrollbar.addListener((status) =>
-        this.checkPosition(status.offset.y)
-      );
+    window.addEventListener('scroll', () =>
+      this.checkPosition(window.pageYOffset)
+    );
 
-      window.pageloader &&
-        window.pageloader.on('contentReplaced', () => {
-          window.scrollbar.addListener((status) =>
-            this.checkPosition(status.offset.y)
-          );
-        });
-    } else {
-      window.addEventListener('scroll', () =>
-        this.checkPosition(window.pageYOffset)
-      );
-    }
+    window.addEventListener('load', () =>
+      this.checkPosition(window.pageYOffset)
+    );
   }
 
   checkPosition(position) {

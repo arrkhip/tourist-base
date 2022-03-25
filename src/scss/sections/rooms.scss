@@ -1,5 +1,14 @@
 .rooms-section {
+  padding: 144px 0 100px;
   overflow: hidden;
+
+  @include max-width($desktop-sm) {
+    padding: 56px 0 28px;
+  }
+
+  @include max-width($touch) {
+    padding: 56px 0 28px;
+  }
 }
 
 .rooms__headline {

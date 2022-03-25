@@ -363,8 +363,8 @@ button {
   }
 
   &-close {
-    --size: 40px;
-    --padding: 5px;
+    --size: 24px;
+    --padding: 0;
     --color: var(--color);
     --color-hover: var(--primary-hover);
     --color-focus: var(--primary-focus);
@@ -383,7 +383,7 @@ button {
 
     svg {
       margin: 0;
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 

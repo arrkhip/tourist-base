@@ -6,6 +6,7 @@ import '@modules/_svg';
 
 // modules
 import '@modules/onLoad';
+import '@modules/locomotiveScroll';
 
 // components
 import '@components/Header';

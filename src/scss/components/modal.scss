@@ -145,6 +145,9 @@
   }
 
   .modal__header {
+    position: relative;
+    z-index: 1;
+
     @include max-width($touch) {
       padding: 16px;
     }

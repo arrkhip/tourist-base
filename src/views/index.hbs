@@ -11,21 +11,23 @@
   </head>
 
   <body>
-    <div class="content">
-      {{> sections/header }}
-      <!--  -->
-      {{> sections/menu }}
+    {{> sections/header }}
+    <!--  -->
+    {{> sections/menu }}
 
-      <main>
-        {{> sections/hero }}
-        {{> sections/offers }}
-        {{> sections/about }}
-        {{> sections/map }}
-        {{> sections/rooms }}
-        {{> sections/services }}
-      </main>
+    <div data-scroll-container class="scroll-container">
+      <div data-scroll-section class="content">
+        <main>
+          {{> sections/hero }}
+          {{> sections/offers }}
+          {{> sections/about }}
+          {{> sections/map }}
+          {{> sections/rooms }}
+          {{> sections/services }}
+        </main>
 
-      {{> sections/footer }}
+        {{> sections/footer }}
+      </div>
     </div>
 
     <!-- tooltips -->

@@ -15,9 +15,15 @@ class Header {
 
     // document.addEventListener('DOMContentLoaded', () => this.checkDevice());
 
-    window.addEventListener('scroll', () =>
-      this.checkPosition(window.pageYOffset)
-    );
+    if (window.locomotiveScroll) {
+      window.locomotiveScroll.on('scroll', (e) => {
+        this.checkPosition(e.scroll.y);
+      });
+    } else {
+      window.addEventListener('scroll', () =>
+        this.checkPosition(window.pageYOffset)
+      );
+    }
 
     window.addEventListener('load', () =>
       this.checkPosition(window.pageYOffset)
@@ -59,7 +65,9 @@ const $header = document.querySelector('.header');
 
 let header = null;
 
-if ($header) header = new Header($header);
+window.addEventListener('load', () => {
+  if ($header) header = new Header($header);
+});
 
 export { header };
 

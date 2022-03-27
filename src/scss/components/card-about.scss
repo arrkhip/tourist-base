@@ -1,4 +1,7 @@
 .card-about {
+  position: relative;
+  z-index: 1;
+
   &__wrapper {
     display: flex;
     min-height: 37.03125vw;

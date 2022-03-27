@@ -21,6 +21,11 @@
   position: relative;
   width: 100%;
   padding-bottom: 51%;
+  visibility: hidden;
+
+  .is-ready & {
+    visibility: visible;
+  }
 
   @include max-width($phone) {
     padding-bottom: 116%;

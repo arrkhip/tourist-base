@@ -18,7 +18,7 @@
     height: 100%;
     margin: auto;
     object-fit: cover;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.4s ease;
 
     &.swiper-lazy {
       opacity: 0;
@@ -112,6 +112,16 @@
   height: 100%;
   cursor: pointer;
   background-color: var(--white);
+
+  &:hover {
+    .card-room__slide {
+      &.swiper-slide-active {
+        .card-room__img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
 
   .swiper-wrapper {
     transition-timing-function: ease;

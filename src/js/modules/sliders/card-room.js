@@ -1,7 +1,7 @@
-import SwiperCore, { Swiper, Pagination, Lazy } from 'swiper/core';
+import SwiperCore, { Swiper, Pagination, Lazy, EffectFade } from 'swiper/core';
 import Helper from '@helpers/Helper';
 
-SwiperCore.use([Pagination, Lazy]);
+SwiperCore.use([Pagination, Lazy, EffectFade]);
 
 const isMobile = window.matchMedia('(max-width: 900px)');
 
@@ -37,6 +37,11 @@ function initProductCardSliders() {
         pagination: {
           el: $pagination,
           clickable: true,
+        },
+
+        effect: isMobile.matches ? 'slide' : 'fade',
+        fadeEffect: {
+          crossFade: true,
         },
 
         on: {

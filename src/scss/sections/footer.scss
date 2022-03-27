@@ -216,6 +216,42 @@
   }
 }
 
+.footer__socials {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 17px;
+}
+
+.footer__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &--w {
+    color: #07d528;
+
+    &:hover {
+      color: #12b32c;
+    }
+  }
+
+  &--t {
+    color: #039be5;
+
+    &:hover {
+      color: #1c85b9;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 3px;
+  }
+
+  .svg {
+    font-size: 32px;
+  }
+}
+
 .footer__phone {
   font-size: 16px;
   font-weight: 300;

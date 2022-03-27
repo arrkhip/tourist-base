@@ -1,6 +1,10 @@
 import LocomotiveScroll from 'locomotive-scroll';
 
-window.addEventListener('load', init);
+const isMobile = window.matchMedia('(max-width: 900px)');
+
+if (!isMobile.matches) {
+  window.addEventListener('load', init);
+}
 
 function init() {
   const $container = document.querySelector('[data-scroll-container]');

@@ -49,6 +49,7 @@
 
   &__left {
     display: inline-flex;
+    flex-grow: 1;
   }
 
   &__content {

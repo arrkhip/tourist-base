@@ -87,7 +87,8 @@
       }
 
       &:not(:last-child) {
-        margin-bottom: 3.125vw;
+        // margin-bottom: 3.125vw;
+        margin-bottom: 1.25vw;
 
         @include max-width($touch) {
           margin-bottom: 16px;

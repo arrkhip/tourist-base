@@ -4,11 +4,14 @@
   left: 0;
   z-index: 10;
   width: 100%;
+  background-color: rgba(var(--white-rgb), 0.6);
   transition: background-color 0.2s ease;
+  backdrop-filter: blur(8px);
 
   &.fixed,
   &.active {
     background-color: var(--white);
+    backdrop-filter: unset;
   }
 
   &__wrap {

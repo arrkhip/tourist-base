@@ -43,7 +43,9 @@
     // &--top {
     // }
 
-    // &--bottom {
-    // }
+    &--bottom {
+      position: relative;
+      left: 50%;
+    }
   }
 }

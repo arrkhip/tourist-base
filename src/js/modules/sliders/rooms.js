@@ -21,10 +21,10 @@ if ($sliders.length) {
       spaceBetween: 20,
       speed: 700,
 
-      followFinger: isMobile.matches,
-      shortSwipes: isMobile.matches,
-      longSwipes: isMobile.matches,
-      allowTouchMove: isMobile.matches,
+      followFinger: true,
+      shortSwipes: true,
+      longSwipes: true,
+      allowTouchMove: true,
 
       watchOverflow: true,
       watchSlidesVisibility: true,

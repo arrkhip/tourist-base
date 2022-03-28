@@ -20,10 +20,10 @@ if ($slider) {
     speed: 800,
     watchOverflow: true,
 
-    followFinger: isMobile.matches,
-    shortSwipes: isMobile.matches,
-    longSwipes: isMobile.matches,
-    allowTouchMove: isMobile.matches,
+    followFinger: true,
+    shortSwipes: true,
+    longSwipes: true,
+    allowTouchMove: true,
 
     navigation: {
       prevEl: $prevEl,

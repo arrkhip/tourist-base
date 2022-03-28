@@ -83,6 +83,7 @@
 
     .card-service__info {
       position: relative;
+      z-index: 2;
       max-width: 848px;
       margin: 108px 124px;
       color: var(--white);
@@ -105,8 +106,8 @@
   }
 
   &__info {
-    position: relative;
-    z-index: 2;
+    // position: relative;
+    // z-index: 2;
   }
 
   &__number {
@@ -126,6 +127,19 @@
         content: '0' counter(service);
       }
     }
+  }
+
+  &__title-wrapper {
+    position: relative;
+  }
+
+  & &__title-placeholder {
+    position: absolute;
+    top: -70px;
+    z-index: -1;
+    margin: 0;
+    line-height: 1;
+    text-transform: none;
   }
 
   &__title {

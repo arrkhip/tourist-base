@@ -1,6 +1,9 @@
 .services {
   padding-top: 100px;
 
+  @include max-width(900px) {
+    padding-top: 40px;
+  }
   &__title {
     font-size: 6rem;
     line-height: 1.167;

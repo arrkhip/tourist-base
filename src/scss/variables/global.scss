@@ -49,6 +49,8 @@ body {
 
 body {
   min-height: var(--vh, 100vh);
+  // for fix tippy.js (wrong position values) https://github.com/atomiks/tippyjs/issues/806
+  transform: translate3d(0, 0, 0);
 }
 
 .content {

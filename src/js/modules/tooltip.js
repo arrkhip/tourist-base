@@ -28,8 +28,8 @@ const balloonTemplate = ({
   src = '',
   title = '',
   list = [],
-  btn1 = { name: '', href: '' },
-  btn2 = { name: '', href: '' },
+  btn1 = { name: '', href: '', target: '_self' },
+  btn2 = { name: '', href: '', target: '_self' },
 }) => {
   let balloonListTemplate = '';
 
@@ -56,11 +56,11 @@ const balloonTemplate = ({
         </dl>
   
         <div class="balloon__buttons">
-          <a href="${btn1.href}" class="button button--small">
+          <a href="${btn1.href}" target="${btn1.target}" class="button button--small">
             ${btn1.name}
           </a>
   
-          <a href="${btn2.href}" class="button button--invert button--small">
+          <a href="${btn2.href}" target="${btn2.target}" class="button button--invert button--small">
             ${btn2.name}
           </a>
         </div>

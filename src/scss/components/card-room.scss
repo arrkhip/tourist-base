@@ -127,6 +127,18 @@
     transition-timing-function: ease;
   }
 
+  .card-room__slide {
+    .card-room__img-wrapper {
+      display: none;
+    }
+
+    &.swiper-slide-active {
+      .card-room__img-wrapper {
+        display: block;
+      }
+    }
+  }
+
   &-wrapper {
     position: relative;
     width: 100%;

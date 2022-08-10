@@ -44,3 +44,21 @@
     padding-right: 30px;
   }
 }
+
+.rooms-slide {
+  .is-ready & {
+    .card-room {
+      display: none;
+    }
+
+    &.swiper-slide-active,
+    &.swiper-slide-prev,
+    &.swiper-slide-next,
+    &.swiper-slide-visible,
+    &.swiper-slide-visible + .rooms-slide {
+      .card-room {
+        display: block;
+      }
+    }
+  }
+}

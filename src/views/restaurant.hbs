@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="bg-white">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>{{ title }}</title>
+  </head>
+
+  <body class="bg-white">
+    {{> sections/header-white }}
+    <!--  -->
+    {{> sections/menu }}
+
+    <div data-scroll-container class="scroll-container">
+      <div data-scroll-section class="content">
+        <main>
+          {{> sections/restaurant}}
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

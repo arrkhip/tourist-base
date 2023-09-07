@@ -13,5 +13,6 @@ import '@components/Header';
 import '@components/Menu';
 import '@components/Modal';
 import '@components/Dropdown';
+import '@components/TabsController';
 
 // modules

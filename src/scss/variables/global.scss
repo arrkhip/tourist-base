@@ -185,3 +185,21 @@ mark {
     border-radius: 0;
   }
 }
+
+[data-tab-content] {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+[data-tab] {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.bg-white {
+  background-color: var(--white);
+}

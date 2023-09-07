@@ -1,0 +1,125 @@
+<!-- restaurant -->
+<section class="restaurant-section">
+  <div class="container">
+    <div class="restaurant">
+      <div class="restaurant__wrap">
+        <div class="restaurant__header">
+          <a href="#" class="restaurant__back"> На главную </a>
+          <h2 class="restaurant__title">Меню ресторана</h2>
+
+          <div class="restaurant__tags">
+            <a href="#" class="button restaurant__tag active">
+              <svg>
+                <use xlink:href="svg/sprite.svg#main-menu"></use>
+              </svg>
+              Основное <span>меню</span>
+            </a>
+            <a href="#" class="button restaurant__tag">
+              <svg>
+                <use xlink:href="svg/sprite.svg#vegan-menu"></use>
+              </svg>
+              вегетарианское <span>меню</span>
+            </a>
+            <a href="#" class="button restaurant__tag">
+              <svg>
+                <use xlink:href="svg/sprite.svg#banket-menu"></use>
+              </svg>
+              банкетное <span>меню</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="restaurant__body">
+          {{> components/restaurant-aside }}
+
+          <div class="restaurant__content">
+            <h3 class="restaurant__content-title">Холодные закуски</h3>
+            <div class="restaurant__content-wrap">
+              <div data-tabs="tabs-rest" class="tabs restaurant__tabs">
+                <div class="restaurant__tabs-buttons buttons-tabs">
+                  <button
+                    data-tab="tab-rest-1"
+                    class="button button--flat button-tab active"
+                  >
+                    Мясные
+                  </button>
+                  <button
+                    data-tab="tab-rest-2"
+                    class="button button--flat button-tab"
+                  >
+                    Сырные
+                  </button>
+                  <button
+                    data-tab="tab-rest-3"
+                    class="button button--flat button-tab"
+                  >
+                    Рыбные
+                  </button>
+                  <button
+                    data-tab="tab-rest-4"
+                    class="button button--flat button-tab"
+                  >
+                    Овощные
+                  </button>
+                </div>
+              </div>
+
+              <div
+                data-tabs-contents="tabs-rest"
+                class="restaurant__tabs-contents"
+              >
+                <div
+                  data-tab-content="tab-rest-1"
+                  class="restaurant__tabs-content active"
+                >
+                  <div class="restaurant__cards">
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                  </div>
+                </div>
+
+                <div
+                  data-tab-content="tab-rest-2"
+                  class="restaurant__tabs-content"
+                >
+                  <div class="restaurant__cards">
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                  </div>
+                </div>
+
+                <div
+                  data-tab-content="tab-rest-3"
+                  class="restaurant__tabs-content"
+                >
+                  <div class="restaurant__cards">
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                    {{> components/restaurant-card }}
+                  </div>
+                </div>
+
+                <div
+                  data-tab-content="tab-rest-4"
+                  class="restaurant__tabs-content"
+                >
+                  <div class="restaurant__cards">
+                    {{> components/restaurant-card }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./ End of container -->
+</section>
+<!-- ./ End of restaurant -->

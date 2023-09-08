@@ -203,3 +203,14 @@ mark {
 .bg-white {
   background-color: var(--white);
 }
+
+.bg-other {
+  background-image: url(../img/svg/bg-product.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include max-width($phone) {
+    background-image: url(../img/svg/bg-product-mobile.svg);
+    background-position: center bottom;
+  }
+}

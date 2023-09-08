@@ -16,3 +16,4 @@ import '@components/Dropdown';
 import '@components/TabsController';
 
 // modules
+import '@modules/sliders/product';
